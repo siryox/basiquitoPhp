@@ -1,0 +1,155 @@
+<div class="row">
+<div class="col-lg-12">
+	<form name="form_producto_editar" method="post" id="form_producto_editar" action="<?php echo BASE_URL ?>almacen/producto/editar/"  >
+	<input name="guardar" id="guardar" type="hidden" value="2" />
+	<input name="id" id="id" type="hidden" value="<?php echo (isset($this->datos[0]['id']))?$this->datos[0]['id']:"" ?>" />
+	
+	<div class="card card-secondary card-outline">
+		<div class="card-header">
+            <span class="card-title">Introduzca información que desea editar del Producto</span>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="form-group col-md-2">
+					<label>*Clasificacion:</label>
+					<select name="clasificacion" id="clasificacion" class="form-control">
+						<option value="-">-Seleccione-</option>
+					<?php if(isset($this->clasificacion) && count($this->clasificacion)): ?>
+						<?php foreach ($this->clasificacion as $val): ?>
+						<?php if($val['grupo']== $this->datos[0]['grupo']): ?>
+							<option value="<?php echo $val['grupo']  ?>" selected><?php echo strtoupper($val['grupo'])  ?></option>
+						<?php else: ?>
+							<option value="<?php echo $val['grupo']  ?>"><?php echo strtoupper($val['grupo'])  ?></option>
+					<?php endif; ?>		
+					<?php endforeach; ?>
+					<?php endif; ?>
+            		</select> 
+				</div>
+			<div class="form-group col-md-2">
+				<label>*Codigo :</label>
+				<input name="codigo"  maxlength="100" type="text" class="form-control" id="codigo" value="<?php echo (isset($this->datos[0]['codigo']))?$this->datos[0]['codigo']:"" ?>" />  
+			</div>
+			<div class="form-group col-md-2">
+				<label title="Esta informacion sera utilizada para los titulos en los reportes  Excel">*Etiqueta Excel:</label>
+				<input type="text"  maxlength="100" class="form-control "  name="etiquetaExcel" id="etiquetaExcel" placeholder="Para reportes en Excel "  value="<?php echo (isset($this->datos[0]['etiquetaExcel']))?$this->datos[0]['etiquetaExcel']:"" ?>"  />
+			</div>
+          <div class="form-group col-md-6">
+				<label>*Descripción:</label>
+				<input type="text"  maxlength="100" class="form-control "  name="descripcion" id="descripcion"  value="<?php echo (isset($this->datos[0]['descripcion']))?$this->datos[0]['descripcion']:"" ?>"  />
+			</div>
+			<div class="form-group col-md-2">
+				<label>*Unidad de Medida:</label>
+				<input type="text"  maxlength="100" class="form-control "  name="unidadMedida" id="unidadMedida"  value="<?php echo (isset($this->datos[0]['unidMedida']))?$this->datos[0]['unidMedida']:"" ?>"  />
+			</div>
+          <div class="form-group col-md-2">
+				<label>*Presentación:</label>
+				<input type="text"  maxlength="100" class="form-control "  name="presentacion" id="presentacion"  value="<?php echo (isset($this->datos[0]['presentacion']))?$this->datos[0]['presentacion']:"" ?>"  />
+			</div>
+          <div class="form-group col-md-2">
+				<label>*Stock Minimo:</label>
+				<input type="number"  maxlength="20" class="form-control "  name="exiMinima" id="exiMinima"  value="<?php echo (isset($this->datos[0]['exiMinima']))?$this->datos[0]['exiMinima']:"" ?>" />
+			</div>
+			<div class="form-group col-md-5">
+				<label>*Comentarios:</label>
+				<textarea class="form-control" name="comentarios" id="comentarios"><?php echo (isset($this->datos[0]['comentarios']))?$this->datos[0]['comentarios']:"" ?></textarea>
+			</div>
+			<div class="form-group col-md-1">
+				<label>*Es Consignado:</label>
+				<input type="checkbox"   class="form-control "  name="consignado" id="consignado" <?php echo ($this->datos[0]['consignado']>0)?'checked':"" ?> value="1" />
+			</div>
+          
+			</div>
+      </br>
+			
+		<div class="row">				
+			<div class="col-md-9">
+				<div class="card card-secondary">
+					<div class="card-header">
+						
+							<div class="custom-control custom-switch">
+								<input type="checkbox" class="custom-control-input" id="customSwitch1">
+								<label class="custom-control-label" for="customSwitch1">Gestionar Costos / Precio</label>
+							</div>
+						
+					</div>
+					<div class="card-body">
+						<div class="row">
+						<div class="form-group col-md-2">
+							<label>*Costo Ult Compra:</label>
+							<input type="text"  maxlength="100" class="form-control text-right"  name="costoUltcpra" id="costoUltcpra"  readonly="true" value="<?php echo (isset($this->datos[0]['ctoUltCompra'])? $this->datos[0]['ctoUltCompra']:"00.0") ?>" />
+						</div>
+						<div class="form-group col-md-2">
+							<label>*Costo Promedio:</label>
+							<input type="text"  maxlength="100" class="form-control text-right"  name="costoPromedio" id="costoPromedio"  readonly="true" value="<?php echo (isset($this->datos[0]['ctoPromedio'])? $this->datos[0]['ctoPromedio']:"00.0") ?>" />
+						</div>
+						<div class="form-group col-md-2">
+							<label>*Costo Prorrateado:</label>
+							<input type="text"  maxlength="100" class="form-control text-right"  name="costoProrrateado" id="costoProrrateado"  readonly="true" value="<?php echo (isset($this->datos[0]['ctoProrrateado'])? $this->datos[0]['ctoProrrateado']:"00.0") ?>" />
+						</div>
+						<div class="form-group col-md-2">
+							<label>*Costo Alcual:</label>
+							<input type="text"  maxlength="100" class="form-control text-right"  name="costoActual" id="costoActual"  readonly="true" value="<?php echo (isset($this->datos[0]['ctoActual'])? $this->datos[0]['ctoActual']:"00.0") ?>" />
+						</div>
+						<div class="form-group col-md-2">
+							<label>*Costo Actual Mercado:</label>
+							<input type="text"  maxlength="100" class="form-control text-right"  name="costoActualMercado" id="costoActualMercado"  readonly="true" value="<?php echo (isset($this->datos[0]['ctoActualMercado'])? $this->datos[0]['ctoActualMercado']:"00.0") ?>" />
+						</div>
+
+						<hr>
+						<div class="form-group col-md-2">
+							<label>Utilidad:</label>
+							<input type="number"  maxlength="20" class="form-control text-right"  name="utilidad" id="utilidad" readonly="true"  value="<?php echo (isset($this->datos[0]['tasaUtil'])? $this->datos[0]['tasaUtil']:"00.0") ?>" />
+						</div>
+						<div class="form-group col-md-2">
+							<label>Utilidad Min:</label>
+							<input type="number"  maxlength="20" class="form-control text-right"  name="utilidadMin" id="utilidadMin"  readonly="true" value="<?php echo (isset($this->datos[0]['tasaUtilMinima'])? $this->datos[0]['tasaUtilMinima']:"00.0") ?>"/>
+						</div>
+						<div class="form-group col-md-2">
+							<label>Pvp1:</label>
+							<input type="number"  maxlength="20" class="form-control text-right"  name="pvp1" id="pvp1"  readonly="true" value="<?php echo (isset($this->datos[0]['Pvp1'])? $this->datos[0]['Pvp1']:"00.0") ?>" />
+						</div>
+						<div class="form-group col-md-2">
+							<label>Pvp2:</label>
+							<input type="number"  maxlength="20" class="form-control text-right"  name="pvp2" id="pvp2"  readonly="true" value="<?php echo (isset($this->datos[0]['Pvp2'])? $this->datos[0]['Pvp2']:"00.0") ?>" />
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-secondary">
+					<div class="card-header">
+						
+							<div class="custom-control custom-switch">
+								<input type="checkbox" class="custom-control-input" id="customSwitch2">
+								<label class="custom-control-label" for="customSwitch2">Gestionar Impuesto</label>
+							</div>
+						
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label>*IVA <strong>%</strong>:</label>
+								<input type="text"  maxlength="100" class="form-control text-right"  name="tasaIva" id="tasaIva" value="<?php echo (isset($this->datos[0]['tasaImpuesto'])? $this->datos[0]['tasaImpuesto']:"00.0") ?>" readonly="true" />
+							</div>
+													
+						</div>
+					</div>
+				</div>	
+			</div>			
+		</div>	
+
+
+
+		</div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-xs btn-app" id="agregar"><i class="fa fa-floppy-o"></i>Grabar</button>
+			<a href="<?php echo BASE_URL ?>almacen/producto/index/""><button type="button" class="btn btn-xs btn-app bg-danger disabled color-palette" id="cancelar"><i class="fa fa-undo"></i>Cancelar</button></a>					
+        </div>
+	</div>
+  </div>
+		  
+</div>
+    
+</form>
+</div>

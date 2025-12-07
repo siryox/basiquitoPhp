@@ -1,0 +1,194 @@
+<div class="row">
+<div class="col-lg-12">
+	<form name="form_compra" method="post" id="form_compra" action="<?php echo BASE_URL ?>compras/compra/agregar"  >
+	<input name="guardar" id="guardar" type="hidden" value="1" />
+    <input name="proveedor" id="proveedor" type="hidden" value="<?php echo $this->proveedor[0]['id'] ?>" />
+	<input name="rif_proveedor" id="rif_proveedor" type="hidden" value="<?php echo $this->proveedor[0]['tipoPersona'].'-'.$this->proveedor[0]['idFiscal'] ?>" />
+    <input type="hidden" name="filas" id="filas" value="<?php echo count($this->productos) ?>" />
+    <input type="hidden" name="orden" id="orden" value="<?php echo $this->orden[0]['referencia'] ?>" />   
+	<div class="card card-secondary card-outline">
+		
+		<div class="card-body">
+			<div class="row">
+                <div class="col-lg-6">    
+                    <div class="card  card-outline" >
+                        <div class="card-body" bis_skin_checked="1">
+                            <dl class="row">
+                                <dt class="col-sm-4">Dirección:</dt>
+                                    <dd class="col-sm-8"><?php echo $this->proveedor[0]['domicilioFiscal'] ?></dd>
+                                <dt class="col-sm-4">Telefónos:</dt>
+                                    <dd class="col-sm-8"><?php echo $this->proveedor[0]['tlfVentas'] .'  -  '.$this->proveedor[0]['tlfAdmon'] ?></dd>
+                                <dt class="col-sm-4">Correo Electrónico</dt>
+                                    <dd class="col-sm-8"><?php echo $this->proveedor[0]['correoVentas'] .'  -  '.$this->proveedor[0]['correoAdmon'] ?></dd>
+                                <dt class="col-sm-4">Id Fiscal:</dt>
+                                    <dd class="col-sm-8"><?php echo $this->proveedor[0]['tipoPersona'] .'  -  '.$this->proveedor[0]['idFiscal'] ?></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">    
+                    <div class="card  card-outline" >
+                       
+                        <div class="card-body">
+                            <div class="row">
+								<div class="form-group col-md-4">
+                                    <label>*Condición de Compra:</label>
+                                    <select name="condicion" id="condicion" class="form-control">
+                                        <option value="-">-Seleccione-</option>
+                                        <option value="CONTADO" <?php if($this->orden[0]['condicion']=='CONTADO') echo 'selected' ?>>CONTADO</option>
+                                        <option value="CREDITO" <?php if($this->orden[0]['condicion']=='CREDITO') echo 'selected' ?>>CREDITO</option>
+                                        
+                                    </select> 
+                                </div> 
+                                <div class="form-group col-md-4">
+									<label>Dias de Credito :</label>
+										<input name="dias_cre"  maxlength="3" type="number" class="form-control" id="dias_cre" value="<?php if($this->orden[0]['plazoCredito']>0) echo $this->orden[0]['plazoCredito'] ?>" readonly />  
+								</div>
+                                
+                                <div class="form-group col-md-4">
+									<label>Nro. Documento :</label>
+										<input name="referencia"  maxlength="10" type="text" class="form-control" id="referencia" value="<?php if($this->orden[0]['plazoCredito']>0) echo $this->orden[0]['plazoCredito'] ?>"  />  
+								</div>
+                                <div class="form-group col-md-3">
+                                    <label>*Fecha Emisión :</label>
+                                    <input name="emision"  type="date" class="form-control" id="emision" value="" />  
+                                </div>
+								<div class="form-group col-md-3">
+                                    <label>*Fecha Vencimiento :</label>
+                                    <input name="vencimiento"  type="date" class="form-control" id="vencimiento"  />  
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Comentario :</label>
+                                    <textarea name="comentario" id="comentario" class="form-control" rows="2"><?php echo $this->orden[0]['comentarios'] ?></textarea>  
+                                </div>
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+	
+            </br>
+		
+            <div class="row">				
+                <div class="col-md-9">
+                    <div class="card ">
+                        <div class="card-header">
+                            
+                        <button type="button" class="btn btn-default" id="add_producto" ><i class="fa fa-cubes"></i><span class="h6"> Agregar Producto </span></button>	
+                            
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-sm" id="productos">
+                                <thead>
+                                <tr class="bg-secondary color-palette">                            
+                                <th style="width: 180px;" >Codigo</th>
+                                <th style="width: 500px;">Description</th>
+                                <th style="width: 150px;">Pvp</th>
+                                <th style="width: 120px;">Cantidad</th>
+                                <th style="width: 130px;">Tsa. IVA %</th>
+                                <th style="width: 150px;">SubTotal</th>          
+                                <th style="width: 32px;"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php if(count($this->productos)): ?>
+                                <?php for($i = 0;$i < count($this->productos);$i++ ): ?>
+                                    <tr>
+                                        <td><input type="text" name="codigo[]" id="codigo<?php echo $i+1 ?>"  data-id="<?php echo $i+1 ?>" value='<?php echo $this->productos[$i]['codProd'] ?>' class="form-control form-control-border form-control-sm searchProducto"   /></td>
+                                        <td><input type="text" name="descripcion[]" id="descripcion<?php echo $i+1 ?>" class='form-control form-control-border form-control-sm'  readOnly value="<?php echo $this->productos[$i]['descripcion'] ?>" /></td>
+                                        <td><input type='text' name="pvp[]"  id="pvp<?php echo $i+1 ?>" class='form-control form-control-border form-control-sm text-right calcular_cant' value="<?php echo $this->productos[$i]['precio'] ?>"  /></td>
+                                        <td><input type='text' name="cantidad[]" id="cantidad<?php echo $i+1 ?>" class='form-control form-control-border form-control-sm text-right calcular_cant' value="<?php echo $this->productos[$i]['cantidad'] ?>" data-id="<?php echo $i+1 ?>"   /></td>
+                                        <td><input name="tsaImpuesto[]" id="tsaImpuesto<?php echo $i+1 ?>" value="<?php echo $this->productos[$i]['tsaImpuesto'] ?>" class="form-control form-control-border form-control-sm text-right calcular_impuesto"    ></td>
+                                        <td><input name="subtotal[]" id="subtotal<?php echo $i+1 ?>" class="form-control form-control-border form-control-sm text-right " readOnly ></td>
+                                        
+                                        <td><button type="button" name="eliminar" id="eliminar<?php echo $i+1 ?>" class="btn btn-default btn-sm" ><i class="fa fa-trash"></i></button></td>
+                                    </tr>  
+                                    <?php endfor ?>  
+                                <?php endif ?>        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card ">
+                        <div class="form-group col-md-12">
+                            <label>SubTotal :</label>
+                            <input name="subtotalDoc"  maxlength="30" type="text" class="form-control text-right" id="subtotalDoc" value="<?php echo $this->orden[0]['subTotal'] ?>" readonly />  
+                        </div> 
+                        <div class="form-group col-md-12">
+                            <label>Impuesto :</label>
+                            <input name="impuestoDoc"  maxlength="30" type="text" class="form-control text-right" id="impuestoDoc" value="<?php echo $this->orden[0]['impuestos'] ?>" readonly />  
+                        </div> 
+                        <div class="form-group col-md-12">
+                            <label>Total :</label>
+                            <input name="totalDoc"  maxlength="30" type="text" class="form-control text-right" id="totalDoc" value="<?php echo $this->orden[0]['montoTotal'] ?>" readonly />  
+                        </div>                          
+
+                    </div>
+                </div>
+                        
+            </div>	
+
+
+		</div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-xs btn-app" id="agregar" ><i class="fa fa-floppy-o"></i>Grabar</button>
+			<a href="<?php echo BASE_URL ?>compras/compra/index/"><button type="button" class="btn btn-xs btn-app bg-danger disabled color-palette" id="cancelar"><i class="fa fa-undo"></i>Cancelar</button></a>					
+        </div>
+	</div>
+  
+  </form>		  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">    
+        <div class="modal-body">
+            <div class="card">
+                <div class="card-header">
+                    <h3></h3>
+                    <div class="card-title">
+                        <div class="input-group input-group-sm">
+                            <input type="text" id="search_producto" name="search_producto" class="form-control float-right " size="50" />
+                            <div class="input-group-append">
+                                <button type="button" name="search" id="search" class="btn btn-default"><i class="fas fa-search"></i></button>
+                            </div>
+                            <input name="fila" id="fila" type="hidden" value="0" />
+                        </div>
+                    </div>
+                </div>                      
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-nowrap" id="tabla">
+                        <thead>
+                            <tr class="bg-light-blue-active" >
+                                
+                                <th width='400'>Descripcion</th>
+                                <th width='150'>Presentacion</th>
+                                <th width='150'>Costo Actual</th>
+                                <th width='150'>Exist</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                              
+                        </tbody>
+                    </table>          
+                </div>
+                <div class="card-footer">
+                    
+               </div> 
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+</div>
+

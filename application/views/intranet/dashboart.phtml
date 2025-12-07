@@ -1,0 +1,208 @@
+<h1><?php echo $this->titulo ?></h1> 
+
+<div class="container-fluid" bis_skin_checked="1">
+
+        <div class="row" bis_skin_checked="1">
+          <div class="col-lg-3 col-6" bis_skin_checked="1">
+            <!-- small box -->
+            <div class="small-box bg-info" bis_skin_checked="1">
+              <div class="inner" bis_skin_checked="1">
+                <h3>Solicitados</h3>
+                <p>Creditos: <span><?php echo (isset($this->contPrg['nroSolicitudCred']))?$this->contPrg['nroSolicitudCred']:'0' ?></span></p>
+                <p>Superficie: <span><?php echo (isset($this->contPrg['supSolicitadaCred']))?$this->contPrg['supSolicitadaCred']:'0' ?> Ha</span></p>
+              </div>
+              <div class="icon" bis_skin_checked="1">
+              <i class="fa fa-light fa-file-invoice"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6" bis_skin_checked="1">
+            <!-- small box -->
+            <div class="small-box bg-warning" bis_skin_checked="1">
+              <div class="inner" bis_skin_checked="1">
+                <h3>Aprobados</h3>
+                <p>Creditos: <span><?php echo (isset($this->contPrg['nroSolicitudAprob']))?$this->contPrg['nroSolicitudAprob']:'0' ?></span> </p>
+                <p>Superficie: <span><?php echo (isset($this->contPrg['supAprobCred']))?$this->contPrg['supAprobCred']:'0' ?> Ha</span> </p>
+              </div>
+              <div class="icon" bis_skin_checked="1">
+              <i class="fa fa-light fa-clipboard-check"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6" bis_skin_checked="1">
+            <!-- small box -->
+            <div class="small-box bg-success" bis_skin_checked="1">
+              <div class="inner" bis_skin_checked="1">
+                <h3>Sembrados<sup style="font-size: 20px"></sup></h3>
+                <p>Creditos: <span><?php echo (isset($this->contPrg['nroSolicitudSemb']))?$this->contPrg['nroSolicitudSemb']:'0' ?></span> </p>
+                <p>Superficie: <span><?php echo (isset($this->contPrg['supSembCred']))?$this->contPrg['supSembCred']:'0' ?> Ha</span> </p>
+              </div>
+              <div class="icon" bis_skin_checked="1">
+              <i class="fa fa-light fa-seedling"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6" bis_skin_checked="1">
+            <!-- small box -->
+            <div class="small-box bg-danger" bis_skin_checked="1">
+              <div class="inner" bis_skin_checked="1">
+                <h3>Cosechados</h3>
+                <p>Creditos: <span><?php echo (isset($this->contPrg['nroSolicitudCosech']))?$this->contPrg['nroSolicitudCosech']:'0' ?></span> </p>
+                <p>Superficie: <span><?php echo (isset($this->contPrg['supCosechCred']))?$this->contPrg['supCosechCred']:'0' ?> Ha</span> </p>
+              </div>
+              <div class="icon" bis_skin_checked="1">
+              <i class="fa fa-light fa-tractor"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-default" bis_skin_checked="1">
+                <div class="card-header" bis_skin_checked="1">
+                <h3 class="card-title">Alcance Logrado</h3>
+
+                <div class="card-tools" bis_skin_checked="1">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="card-body" bis_skin_checked="1">
+                  <div class="row" bis_skin_checked="1">
+                    <div class="col-md-6" bis_skin_checked="1">
+                      <h5 class="title">Nivel de Hectareas.</h5>
+                      <div class="chart-responsive" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                        <canvas id="grafico1" height="190" style="display: block; width: 326px; height: 170px;" width="326" class="chartjs-render-monitor"></canvas>
+                      </div>
+                      <!-- ./chart-responsive -->
+                    </div>
+                    <div class="col-md-6" bis_skin_checked="1">
+                    <h5>Nivel de Creditos</h5>
+                      <div class="chart-responsive" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                        <canvas id="grafico2" height="190" style="display: block; width: 326px; height: 170px;" width="326" class="chartjs-render-monitor"></canvas>
+                      </div>
+                      <!-- ./chart-responsive -->
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+            <div class="card card-default" bis_skin_checked="1">
+                <div class="card-header" bis_skin_checked="1"> 
+                <h3 class="card-title">Balance de Programa de Financiamiento</h3>
+
+                <div class="card-tools" bis_skin_checked="1">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="card-body" bis_skin_checked="1">
+                  <div class="row" bis_skin_checked="1">
+                    <div class="col-md-6" bis_skin_checked="1">
+                      <h5 class="title">Nivel de Hectareas.</h5>
+                      <div class="chart-responsive" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                        <canvas id="grafico5" height="190" style="display: block; width: 326px; height: 170px;" width="326" class="chartjs-render-monitor"></canvas>
+                      </div>
+                      <!-- ./chart-responsive -->
+                    </div>
+                    <div class="col-md-6" bis_skin_checked="1">
+                    <h5>Nivel de Creditos</h5>
+                      <div class="chart-responsive" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                        <canvas id="grafico6" height="190" style="display: block; width: 326px; height: 170px;" width="326" class="chartjs-render-monitor"></canvas>
+                      </div>
+                      <!-- ./chart-responsive -->
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="card card-default" bis_skin_checked="1">
+                <div class="card-header" bis_skin_checked="1">
+                <h3 class="card-title">Pie Chart</h3>
+
+                <div class="card-tools" bis_skin_checked="1">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="card-body" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                <canvas id="pieChar3" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 772px;" width="772" height="250" class="chartjs-render-monitor"></canvas>
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+
+
+            <div class="card" bis_skin_checked="1">
+              <div class="card-header" bis_skin_checked="1">
+                <h3 class="card-title">Alcance Logrado</h3>
+
+                <div class="card-tools" bis_skin_checked="1">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" bis_skin_checked="1">
+                <div class="row" bis_skin_checked="1">
+                  <div class="col-md-6" bis_skin_checked="1">
+                    <h5 class="title">Nivel de Hectareas.</h5>
+                    <div class="chart-responsive" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                      <canvas id="grafico1" height="190" style="display: block; width: 326px; height: 170px;" width="326" class="chartjs-render-monitor"></canvas>
+                    </div>
+                    <!-- ./chart-responsive -->
+                  </div>
+                  <div class="col-md-6" bis_skin_checked="1">
+                  <h5>Nivel de Creditos</h5>
+                    <div class="chart-responsive" bis_skin_checked="1"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
+                      <canvas id="grafico2" height="190" style="display: block; width: 326px; height: 170px;" width="326" class="chartjs-render-monitor"></canvas>
+                    </div>
+                    <!-- ./chart-responsive -->
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-body -->
+              
+              <!-- /.footer -->
+            </div>
+            
+        </div>
+    </div>
+
+
+        
+
+</div>

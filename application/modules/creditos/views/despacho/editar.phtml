@@ -1,0 +1,309 @@
+<div class="row">
+  <div class="col-12">
+    <form name="form-despacho-entregar" id="form-despacho-entregar" method="post" action="<?php echo BASE_URL ?>creditos/despacho/editar">
+    <input name="guardar" id="guardar" type="hidden" value="3"  />
+    <input name="id" id="id" type="hidden" value="<?php  echo $this->datos[0]['id'] ?>" />    
+    <input name="configCal" id="configCal" type="hidden" value="<?php echo $this->configCal ?>"  />
+    <input name="configPvp" id="configPvp" type="hidden" value="<?php echo $this->configPvp ?>"  />
+    <input name="tipo" id="tipo" type="hidden" value="<?php echo $this->datos[0]['tipo'] ?>"  />
+    
+    <!-- Main content -->
+    <div class="invoice p-3 mb-3">
+              <!-- title row -->
+              <div class="row">
+                <div class="col-12">
+                <?php if(strtoupper($this->datos[0]['estado'])=='ANULADO'): ?>
+                  <div class="ribbon-wrapper ribbon-xl" bis_skin_checked="1">
+                      <div class="ribbon bg-danger text-xl" bis_skin_checked="1"> ANULADO</div>
+                  </div>
+                <?php endif ?>  
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- info row -->
+              <div class="row invoice-info">
+                <div class="col-sm-4 invoice-col">
+                  
+                  <address>
+                    <strong><?php echo $this->configEmp['razon social'] ?></strong><br>
+                    <small><?php echo $this->configEmp['IdFiscal'] ?></small><br>
+                    <small><?php echo $this->configEmp['domicilio fiscal'] ?></small><br>
+                   
+                  </address>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 invoice-col">
+                    <b>*Productor:</b>
+                    <input name="productor" id="productor" type="text" class="form-control form-control-sm" value="<?php echo $this->datos[0]['razonSocial'] ?>" />
+                    
+                  <address>
+                    <strong>Dirección : </strong><small><span id="direccion"></span></small><br>
+                    <small>Phone: <span class="telefono"></span></small><br>
+                    <small>Email: <span class="correo"></span></small>
+                  </address>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 invoice-col">
+                  <b>*Crédito: </b>
+                  <input name="credito" id="credito" type="text" class="form-control form-control-sm" value="<?php echo $this->datos[0]['idCredito'].'-' ?>" />
+                  <br>
+                  
+                  <b>Fecha:</b> <input name="fecha" id="fecha" type="date" class="form-control form-control-sm" value="<?php echo date('Y-m-d',strtotime($this->datos[0]['fecha'])) ?>" />
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+ 
+              <!-- Table row -->
+              <div class="row">
+                <div class="col-md-12 ">
+                <div class="card card-defauld">
+                    <div class="card-header"><i class="fa  fa-exclamation-circle"></i>  Introduzca las cantidades a entregar de cada Item</div>
+                    <div class="card-body">   
+                    <input type="hidden" name="filas" id="filas" value="<?php echo count($this->productos) ?>" />    
+                        <table class="table table-sm" id="productos">
+                            <thead>
+                            <tr class="bg-secondary color-palette">                            
+                            <th style="width: 200px;"  >Código</th>
+                            <th style="width: 450px;">Descripción</th>
+                            <th style="width: 250px;">Almacén</th>
+                            <?php if($this->datos[0]['tipo']=='NDI'):  ?>
+                              <th style="width: 150px;" class="text-center">Devueltas</th>
+                            <?php else: ?>
+                              <th style="width: 150px;" class="text-center">Cantidad</th>
+                            <?php endif; ?>
+                            <th style="width: 150px;" class="text-center">Pvp</th>          
+                            <th style="width: 150px;" class="text-center">Subtotal</th>
+                            <th style="width: 150px;" class="text-center">Entregado</th>
+                            
+                            
+                            </tr>
+                            </thead>
+                            <tbody>
+                                  <?php if(count($this->productos)): ?>
+                                    <?php $i=1; ?>
+                                    <?php foreach($this->productos as $prd): ?>
+                                        <tr id="fila<?php echo $i; ?>">
+                                            <td><?php echo $prd['codigo'] ?><input name="codigo[]"  type="hidden" value="<?php echo $prd['codigo'] ?>"  /></td>
+                                            <td><?php echo $prd['descripcion'] ?><input name="descripcion[]"  type="hidden" value="<?php echo $prd['descripcion'] ?>"  /> <input name="tsaImpuesto[]" id="tsaImpuesto<?php echo $i; ?>"  type="hidden" value="<?php echo $prd['tasaImpto'] ?>"  /></td>
+                                            <td><?php echo $prd['idAlmacen'].' - '.$prd['nombreAlmacen'] ?><input name="idDeposito[]"  type="hidden" value="<?php echo $prd['idAlmacen'] ?>"  /><input name="deposito[]"  type="hidden" value="<?php echo $prd['nombreAlmacen'] ?>"  /></td>
+                                           <?php if($this->datos[0]['tipo']=='NDI'):  ?> 
+                                            <td class="text-right"><input name="cantidad[]" id="cantidad<?php echo $i; ?>"  type="number" value="<?php echo $prd['cantDevolucion'] ?>" class="form-control form-control-sm text-right calcular_cant" data-id="<?php echo $i; ?>" /></td>
+                                            <td class="text-right"><input name="pvp[]" id="pvp<?php echo $i; ?>"  type="text" value="<?php echo number_format($prd['pvp'],2,".",",") ?>" class="form-control form-control-sm text-right calcular_tot" data-id="<?php echo $i; ?>" /><input name="costo[]"  type="hidden" value="<?php echo $prd['costo'] ?>"  /></td>
+                                            <td class="text-right"><input name="subtotal[]" id="subtotal<?php echo $i; ?>"  type="text" value="<?php echo number_format($prd['pvp']* $prd['cantDevolucion'],2,".",",") ?>" class="form-control form-control-sm text-right" readonly /></td>
+                                            <?php else: ?> 
+                                              <td class="text-right"><input name="cantidad[]" id="cantidad<?php echo $i; ?>"  type="number" value="<?php echo $prd['cantidad'] ?>" class="form-control form-control-sm text-right calcular_cant" data-id="<?php echo $i; ?>" /></td>
+                                            <td class="text-right"><input name="pvp[]" id="pvp<?php echo $i; ?>"  type="text" value="<?php echo number_format($prd['pvp'],2,".",",") ?>" class="form-control form-control-sm text-right calcular_tot" data-id="<?php echo $i; ?>" /><input name="costo[]"  type="hidden" value="<?php echo $prd['costo'] ?>"  /></td>
+                                            <td class="text-right"><input name="subtotal[]" id="subtotal<?php echo $i; ?>"  type="text" value="<?php echo number_format($prd['pvp']* $prd['cantidad'],2,".",",") ?>" class="form-control form-control-sm text-right" readonly /></td>
+                                           
+                                            <?php endif; ?>
+                                           <?php if($this->datos[0]['tipo']=='NDI'):  ?>
+                                              <td class="text-right"><?php echo number_format($prd['cantDevolucion'],2,".",",") ?></td>    
+                                                                                          
+                                            <?php else: ?>  
+                                                <?php if($prd['cantEntregada'] >= $prd['cantidad']):  ?>
+                                                  <td><input name="entregar[]" id="entregar<?php echo $i; ?>" type="number"  class="form-control form-control-sm text-right" value="0"  data-id="<?php echo $i; ?>" readonly/></td>
+                                                <?php else: ?>
+                                                  <td><input name="entregar[]" id="entregar<?php echo $i; ?>" type="number" min="0"  class="form-control form-control-sm text-right entregado"  required  data-id="<?php echo $i; ?>" /></td>  
+                                                <?php endif;  ?>
+                                            <?php endif; ?>
+                                                                                        
+                                            <td></td>
+                                        </tr>
+                                        <?php $i++; ?>
+                                    <?php endforeach ?>    
+                                 <?php endif; ?>   
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              <div class="row ">
+                <!-- accepted payments column -->
+                <div class="col-sm-7">
+                  <div class="row">
+                  <div class="col-md-6" style="padding-left: 10px;">    
+                    <small>
+                      <div class="card card-info">              
+                        <table class="table table-sm"> 
+                          <thead>
+                            <tr>
+                              <th style="width: 10px">#</th>
+                              <th style="width: 100px">Grupo</th>
+                              <th style="width: 80px">Aprobado</th>
+                              <th style="width: 80px">Disponible</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>1.</td>
+                            <td>Semillas:</td>
+                            <td class="text-right">
+                              <span class="" id="semilla_aprobado">00.0</span>
+                            </td>
+                            <td class="text-right">
+                              <span class="" id="semilla_disponible">00.0</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2.</td>
+                            <td>Fertilizantes:</td>
+                            <td class="text-right">
+                              <span class="" id="fertilizante_aprobado">00.0</span>
+                            </td>
+                            <td class="text-right">
+                              <span class="" id="fertilizante_disponible">00.0</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3.</td>
+                            <td>Agroquimicos</td>
+                          <td class="text-right">
+                            <span class="" id="agroquimico_aprobado">00.0</span>
+                          </td>
+                          <td class="text-right">
+                            <span class="" id="agroquimico_disponible">00.0</span>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td>4.</td>
+                            <td>Combustible</td>
+                            <td class="text-right">
+                              <span class="" id="combustible_aprobado">00.0</span>        
+                            </td>
+                            <td class="text-right">
+                              <span class="" id="combustible_disponible">00.0</span>    
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5.</td>
+                            <td>Otros Gastos</td>
+                            <td class="text-right">
+                              <span  id="otroGto_aprobado">00.0</span>    
+                            </td>
+                            <td class="text-right">
+                              <span  id="otroGto_disponible">00.0</span>
+                            </td>
+                          </tr>
+                          </tbody>
+                          </table>
+                          
+                          </div>
+                      </small>
+                  </div>    
+                    <div class="col-md-6">
+                      <div class="card card-default">
+                        <div class="card-body">
+                          <label class="">Comentario: </label>
+                          <textarea name="comentario" id="comentario" class="form-control form-control-border" rows="4"><?php echo $this->datos[0]['comentarios'].' / '.$this->datos[0]['concepto'] ?></textarea>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <!-- /.col -->
+                <div class="col-5">
+                  <div class="card card-secondary card-outline">
+                  <div class="card-body">  
+                  
+                    <table class="table table-sm">
+                      <tr>
+                        <th style="width:50%">Subtotal:</th>
+                        <td><input id="subtotalDoc" name="subtotalDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="<?php echo number_format($this->datos[0]['montoTotal'],2,".",",") ?>" readonly></td>
+                      </tr>
+                      <tr>
+                        <th style="width:50%">Monto Exento / Exonerado:</th>
+                        <td><input id="exentoDoc" name="exentoDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="<?php echo number_format($this->datos[0]['totExcento'],2,".",",") ?>" readonly></td>
+                      </tr>
+                      <tr>
+                        <th style="width:50%">Total Base Imponible:</th>
+                        <td><input id="baseImponibleDoc" name="baseImponibleDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="<?php echo number_format($this->datos[0]['totImponible'],2,".",",") ?>" readonly></td>
+                      </tr>
+                      <tr>
+                        <th>Impuesto (16%) Sobre Base Imponible</th>
+                        <td><input id="impuestoDoc" name="impuestoDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="<?php echo number_format($this->datos[0]['impuesto'],2,".",",") ?>" readonly></td>
+                      </tr>
+                      <tr>
+                        <th>Total:</th>
+                        <td><input id="totalDoc" name="totalDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="<?php echo number_format($this->datos[0]['montoTotal'],2,".",",") ?>" readonly></td>
+                      </tr>
+                    </table>
+                  
+                  </div>
+                  </div>
+                </div>
+                
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              <!-- this row will not appear when printing -->
+              <div class="row no-print">
+                <div class="col-12">
+                  <a href="<?php echo BASE_URL ?>creditos/despacho" class="btn btn-danger float-right" ><i class="fa fa-undo"></i> Cancelar</a>
+                  <?php if(strtoupper($this->datos[0]['estado'])!='ANULADO'): ?>                              
+                    <button type="button" class="btn btn-success float-right" style="margin-right: 5px;" id="agregar"><i class="fa fa-floppy-o"></i> Grabar</button>
+                  <?php endif ?>
+                </div>
+              </div>
+    </div>
+    </form>            <!-- /.invoice -->
+  </div><!-- /.col -->
+</div><!-- /.row -->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="card">
+              <div class="card-header">
+                <h3></h3>
+                <div class="card-title">
+                    <div class="input-group input-group-sm">
+                        <input type="text" id="search_producto" name="search_producto" class="form-control float-right " size="50" />
+                        <div class="input-group-append">
+                            <button type="button" name="search" id="search" class="btn btn-default"><i class="fas fa-search"></i></button>
+                        </div>
+                        <input name="fila" id="fila" type="hidden" value="0" />
+                    </div>
+                </div>
+              </div>                      
+              <div class="card-body table-responsive p-0">
+                    
+                        
+                          <table class="table table-hover text-nowrap" id="tabla">
+                              <thead>
+                                  <tr class="bg-light-blue-active" >
+                                      
+                                      <th width='400'>Descripción</th>
+                                      <th width='150'>Presentación</th>
+                                      <th width='150'>Almacén</th>
+                                      <th width='150'>Exist</th>
+                                      <th></th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+
+                              </tbody>
+                            </table>          
+                    
+                  
+                </div>
+               <div class="card-footer">
+                    <div>
+                      
+                  </div>
+               </div> 
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

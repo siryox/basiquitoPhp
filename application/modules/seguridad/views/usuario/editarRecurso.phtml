@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-lg-12">
+    <form method="post" autocomplete="off" name="form-permiso" id="form-permiso" action="<?php echo BASE_URL ?>seguridad/usuario/guardarRecursoUsuario/" >        
+        <div class="card card-default">
+            <div class="card-header">
+                <div class="card-tools">
+                    <div class="btn-group btn-group-toggle">
+                        <button type="button" class="btn btn-xs btn-app" name="agregar_recurso" id="agregar_recurso" title="Presione aquí para GUARDAR la Edición del Recurso del Usuario"><i class="fa fa-floppy-o"></i>Grabar</button>
+                        <a href="<?php echo BASE_URL ?>seguridad/usuario/permisoUsuario/<?php echo $this->usuario ?>"><button type="button" class="btn btn-xs btn-app" id="cancelar"><i class="fa fa-undo"></i>Cancelar</button></a>					
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    
+                        <div class="col-lg-4 col-md-6">
+
+                            <input name="guardar" type="hidden" id="guardar" value="2"/>
+                            <input name="nro_permiso" type="hidden" value="<?php echo $this->nro_permiso ?>" />
+                            <input name="usuario" type="hidden" value="<?php echo $this->usuario ?>" />
+                            
+                                <div class="form-group col-xs-8">
+                                    <label>*Recurso:</label>
+                                    <select class="form-control" name="recurso" id="recurso" required />
+                                        <option value="0">-Seleccione-</option>
+                                        <?php if(isset($this->recursos)&& count($this->recursos)):  ?>
+                                            <?php foreach ($this->recursos as $rec): ?>
+                                                <?php if($rec['id']== $this->recurso): ?>
+                                                    <option value="<?php echo $rec['id'] ?>" selected><?php echo ucfirst($rec['nombre_recurso']) ?></option>
+                                                <?php else: ?>
+                                                    <option value="<?php echo $rec['id'] ?>" ><?php echo ucfirst($rec['nombre_recurso']) ?></option>
+                                                <?php endif; ?>    
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
+                                    </select>
+                                </div>
+                            
+                        </div>
+
+                        <div class="col-lg-8 col-md-6">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                        <thead>
+                                        <tr class="bg-secondary color-palette" >
+                                            <th>Permiso</th>
+                                            <th>Descripción</th>
+                                            <th></th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php if(isset($this->lista) && count($this->lista)) :?>
+                                            <?php foreach ($this->lista as $per) :?>
+                                            <tr>
+                                                <td><?php echo $per['nombre_permiso'] ?></td>
+                                                <td><?php echo $per['descripcion_permiso'] ?></td>
+                                                <td><select name="estatus<?php echo $per['id'] ?>" class="form-control input-group-sm" >
+                                                        <option value="2" <?php if($per['estatus']==2)echo 'selected' ?>> POR ASIGNAR </option>
+                                                        <option value="9" <?php if($per['estatus']==9)echo 'selected' ?>> DENEGADO </option>
+                                                        <option value="1" <?php if($per['estatus']==1)echo 'selected' ?>> AUTORIZADO </option>
+                                                    </select>
+                                                    <input name="permiso<?php echo $per['id'] ?>" value="<?php echo $per['id'] ?>" type="hidden" />
+                                                    
+                                                    
+                                            </tr>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>    
+                                        </tbody>
+                                </table>                      
+                            </div>
+                        </div>
+                </div>                        
+            </div>
+        </div>
+        </form>            
+    </div>    
+</div>

@@ -1,0 +1,66 @@
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">	
+			    <div class="card-header">
+                    <h3 class="card-title"> <?php echo strtoupper($this->almacen[0]['nombre']) ?></h3>
+                    <div class="card-tools">
+                    <a  href="<?php echo BASE_URL ?>almacen/deposito/index/" title="Presione aquí para regresar " class=""><button class="btn btn-default btn-sm" ><i class="fa-solid fa-arrow-rotate-left"></i></button></a>
+                    </div>
+				      
+                      
+			    </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-bordered table-striped" id="example1" >
+                                <thead>
+                                    <tr class="bg-secondary color-palette" >
+                                    
+                                    <th>Id</th>
+                                    <th>Descripcion</th>
+                                    <th>Precio 1</th>
+                                    <th>Precio 2</th>
+                                    <th>Presentacion</th>
+                                    <th>Existencia</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php if(isset($this->productos) && count($this->productos)) :?>
+                                    <?php foreach ($this->productos as $pro) :?>
+                                    <tr>
+                                        
+                                        <td><?php echo strtoupper($pro['id']) ?></td>
+                                        <td><?php echo $pro['descripcion'] ?></td>
+                                        <td><?php echo $pro['Pvp1'] ?></td>
+                                        <td><?php echo $pro['Pvp2'] ?></td>
+                                        <td><?php echo $pro['unidMedida']." / ".$pro['presentacion'] ?></td>
+                                        <td><?php echo $pro['existenciaActual'] ?></td>
+                                        <td><button class="btn btn-default" type="button"><i class="fa-solid fa-right-left"></i></button></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>    
+                                </tbody>
+                                <tfoot>
+                                
+                                </tfoot>
+                            </table>
+                        </div> 
+                        <div class="col-md-6">
+                                      
+
+                        </div>
+                    </div>       
+                    <hr>
+                    <p>
+                            <?php //if(isset($this->paginacion)) echo $this->paginacion; ?>
+                    </p>
+                
+                </div>
+
+        </div>
+    </div>
+        
+</div>

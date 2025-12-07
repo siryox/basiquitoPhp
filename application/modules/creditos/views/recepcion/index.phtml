@@ -1,0 +1,200 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+			
+            <div class="card-header">
+                <a  href="<?php echo BASE_URL ?>creditos/recepcion/agregar/" title="Presione aquí para AGREGAR un nuevo registro"><button class="btn btn-default btn-sm" ><i class="fa fa-plus"></i></button></a>  
+                <div class="card-tools">
+                    <div class="input-group mb-3">
+                    <!-- /btn-group 
+                    
+                        <div class="input-group-prepend">
+                            <button class="btn btn-block btn-outline-secondary" name="reporte_recepcion" id="reporte_recepcion"  data-toggle="modal" data-target="#modal-xxl" value="<?php echo $val['id'] ?>"  ><i class="fa-solid fa-file-contract"></i>Informes</button>
+                        </div>
+                    -->    
+                    <!-- /btn-group -->
+                        <form name="form-filter" id="form-filter" method="POST" action="">
+                            <select name="programa" id="programa" class="form-control">    
+                            <option value="">-Seleccione-</option>
+                            <?php if(count($this->programa)): ?>
+                                <?php foreach($this->programa as $prg): ?>
+                                    <option value="<?php echo $prg['id'] ?>"><?php echo $prg['nombre'] ?></option>
+                                <?php endforeach ?> 
+                                    
+                            <?php endif; ?>
+                            <option value="0">TODOS</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>            
+            </div>
+ 
+          <div class="card-body" id="tabla-recepcion">
+                <table class="table table-bordered table-striped" id="example1" >
+                    <thead>
+                        <tr class="bg-secondary color-palette" >
+                        <th>Id</th>
+                        <th>Fecha</th>
+                        <th>Productor</th>
+                        <th>Camino</th>
+                        <th>Nro. Boleta</th>
+                        <th>Peso Neto</th>
+                        <th>Peso Acond.</th>
+                        <th>Convenio.</th>
+                        <th>Estado</th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if(isset($this->lista) && count($this->lista)) :?>
+                        <?php foreach ($this->lista as $val) :?>
+                        <tr>
+                            <td><?php echo $val['id'] ?></td>
+                            <td><?php echo $val['fecha'] ?></td>
+                            <td><?php echo strtoupper($val['idFiscalProductor'].'-'.$val['RazonSocial']) ?></td>
+                  
+                            <td><?php echo strtoupper($val['modeloCamion'].' - placa:'.$val['placaCamion']) ?></td>
+                            <td><?php echo strtoupper($val['nroBoleta']) ?></td>
+                            <td class="text-right"><?php echo strtoupper($val['pesoNeto']) ?></td>
+                            <td class="text-right"><?php echo strtoupper($val['pesoAcondicionado']) ?></td>
+                            <td class="text-right"><?php echo strtoupper($val['empresaConvenio']) ?></td>
+                            <td class="text-center">
+                                <?php if(strtoupper($val['estado']=='XAPROBAR')): ?>
+                                    <div class="progress progress-xs progress-striped active" title="">
+                                        <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                    </div>
+                                    <span class="badge bg-warning">50% - <?php echo strtoupper($val['estado']) ?></span> 
+                                <?php else: ?> 
+                                    <?php if(strtoupper($val['estado']=='RECHAZADO')): ?>  
+                                        <span class="badge bg-danger"><?php echo strtoupper($val['estado']) ?> </span>
+                                    <?php else: ?>   
+                                        <div class="progress progress-xs progress-striped active" title="">
+                                        <div class="progress-bar bg-success" style="width: 100%"></div>
+                                    </div>
+                                    <span class="badge bg-success">100% - <?php echo strtoupper($val['estado']) ?></span> 
+                                    <?php endif; ?>    
+                                <?php endif; ?>   
+                            <td>
+                                <a href="<?php echo BASE_URL ?>creditos/recepcion/editar/<?php echo $val['id'] ?>" >
+                                    <button class="btn btn-default btn-sm" title="Presione aquí para editar registro"> <i class="fa fa-edit"></i></button>
+                            </td>
+                            
+                            <td>
+                            <?php if($val['estado']!='LIQUIDADO'):?>
+                                <a href="<?php echo BASE_URL ?>creditos/recepcion/anular/<?php echo $val['id'] ?>" >
+                                <button class="btn btn-default btn-sm" title="Presione aquí para Cancelar Registro"> <i class="fa fa-undo"></i></button>
+                            <?php endif; ?>  
+                            </td>
+                            <td>  
+                                <button class="btn btn-default btn-sm imprimir" value="<?php echo $val['id'] ?>" title="Presione aquí para imprimir Nota" data-toggle="modal" data-target="#modal-xl"><i class="fa fa-print"></i></button>
+                            </td>
+                              
+                        </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>    
+                    </tbody>
+                    <tfoot>
+                      
+                    </tfoot>
+                </table>
+                <hr>
+                <p>
+                        <?php //if(isset($this->paginacion)) echo $this->paginacion; ?>
+                </p>
+            
+          </div>
+
+        </div>
+    </div>
+        
+</div>
+
+
+<div class="modal fade" id="modal-xl" bis_skin_checked="1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-xl" bis_skin_checked="1">
+        <div class="modal-content" bis_skin_checked="1">
+            <div class="modal-header" bis_skin_checked="1">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" bis_skin_checked="1">
+                <div id="nota" ></div>
+            </div>
+            <div class="modal-footer justify-content-between" bis_skin_checked="1">
+               
+                <button type="button" class="btn btn-primary imprimir" id="imprimir" value="<?php echo $val['id'] ?>"><i class="fa fa-print"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="modal fade" id="modal-xxl" bis_skin_checked="1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-xl" bis_skin_checked="1">
+        <div class="modal-content" bis_skin_checked="1">
+            <div class="modal-header" bis_skin_checked="1">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" bis_skin_checked="1">
+                <div class="container-fluid">                
+                    <div class="row justify-content-between">
+                        <div class="col-md-3">
+                            <label>Convenios</label>
+                            <select class="form-control" name="convenio_reporte" id="convenio_reporte" >
+                                <option value="0">-Seleccione-</option>
+                                <?php if(count($this->convenio)): ?>
+                                    <?php foreach($this->convenio as $conv): ?>
+                                        <option value="<?php echo $conv['id'] ?>"><?php echo  $conv['nombre'] ?></option>
+                                    <?php endforeach ?>        
+                                <?php endif  ?>
+                            </select>           
+                        </div>            
+                        <div class="col-md-3">
+                            <label>Productor</label>
+                            <select class="form-control" name="productor_reporte" id="productor_reporte" >
+                                <option value="0">-Seleccione-</option>
+                                <?php if(count($this->productor)): ?>
+                                    <?php foreach($this->productor as $pro): ?>
+                                        <option value="<?php echo $pro['id'] ?>"><?php echo  $pro['razonSocial'] ?></option>
+                                    <?php endforeach ?>        
+                                <?php endif  ?>
+                            </select>           
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>*Fecha de Inicio:</label>
+                                    <input type="date"  class="form-control "  name="fechaIni" id="fechaIni" value="" min="2024-10-01" max="<?php echo date('Y-m-d') ?>" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>*Fecha de Final:</label>
+                                    <input type="date"  class="form-control "  name="fechaFin" id="fechaFin"  value="" min="2024-10-01" max="<?php echo date('Y-m-d') ?>"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-2  align-self-center">   
+                            <button type="button" class="btn btn-info" id=""><i class="fa fa-solid fa-file-import"></i> Generar Reporte</button>
+                                    
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="nota" ></div>
+            </div>
+            <div class="modal-footer justify-content-between" bis_skin_checked="1">
+               
+                <button type="button" class="btn btn-primary" id="imprimir"><i class="fa fa-print"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,246 @@
+<div class="row">
+<div class="col-lg-12">
+	<form name="form_recepcion_agregar" method="post" id="form_recepcion_agregar" action="<?php echo BASE_URL ?>creditos/recepcion/agregar/"  >
+	<input name="guardar" id="guardar" type="hidden" value="1" />
+	
+	<div class="card card-secondary card-outline">
+		<div class="card-header">
+            <span class="card-title">Nueva Recepcion</span>
+		</div>
+		<div class="card-body">
+			<div class="row">
+            <div class="col-md-6">
+                <div class="card card-secondary">
+                    <div class="card-header">
+                        <span class="card-title">Información Productor</span>
+                    </div>
+                    <div class="card-body"> 
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>*Id Fiscal :</label>
+                                <select class="form-control select2" style="width: 100%;" name="idFiscal" id="idFiscal" >
+                                    <option value="0">-Seleccione-</option>
+                                    <?php if(isset($this->productor) && count($this->productor)): ?>
+                                    <?php foreach ($this->productor as $val): ?>
+                                        <?php if($this->recepcion[0]['idFiscalProductor']==$val['idFiscal']) :?>
+                                            <option value="<?php echo $val['idFiscal']  ?>" selected><?php echo strtoupper($val['razonSocial'])  ?></option>
+                                        <?php else :?>
+                                            <option value="<?php echo $val['idFiscal']  ?>"><?php echo strtoupper($val['razonSocial'])  ?></option>
+                                        <?php endif ?>
+                                    <?php endforeach; ?>
+                                    <?php endif; ?>
+
+                                </select>
+                                <input name="idProductor" id="id_productor" type="hidden"  />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>*Dirección:</label>
+                                <input type="text"  maxlength="100" class="form-control "  name="direccion" id="direccion"  disabled />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>*teléfono:</label>
+                                <input type="text"  maxlength="100" class="form-control "  name="telefono" id="telefono"  disabled />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>*Correo Electrónico:</label>
+                                <input type="email"  maxlength="100" class="form-control "  name="correo" id="correo"  disabled />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+                </div>
+                <div class="col-md-6">
+                        <div class="card card-secondary">
+                            <div class="card-header">
+                                <span class="card-title">Información de Recepción</span>
+		                    </div>
+                            <div class="card-body"> 
+                                <div class="row">
+                                    
+                                    <div class="form-group col-md-12">
+                                        <label>*Crédito :</label>
+                                        <select name="credito" id="credito" class="form-control">
+                                            <option value="0">-Seleccione-</option>
+                                            <?php if(isset($this->credito) && count($this->credito)): ?>
+                                            <?php foreach ($this->credito as $val): ?>
+                                                <?php if($val['id'] == $this->recepcion[0]['idCredito']): ?>        
+                                                    <option value="<?php echo $val['id']  ?>" selected><?php echo strtoupper($val['ProgFinanc']).'  |  FINCA: '.$val['fincas_nombre']  ?></option>
+                                                <?php else : ?>
+                                                    <option value="<?php echo $val['id']  ?>"><?php echo strtoupper($val['ProgFinanc']).'  |  FINCA: '.$val['fincas_nombre']  ?></option>    
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            <?php endif; ?> 
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6">
+                                        <label>*Almacenadora:</label>
+                                        <select name="almacenadora" id="almacenadora" class="form-control"  >
+                                            <option value="0">-Seleccione-</option>
+                                            <?php if(isset($this->proveedor) && count($this->proveedor)): ?>
+                                            <?php foreach ($this->proveedor as $val): ?>
+                                                <?php if($val['id']==$this->recepcion[0]['almacenadora']): ?>
+                                                    <option value="<?php echo $val['id']  ?>" selected><?php echo strtoupper($val['razonSocial'])  ?></option>
+                                                <?php else: ?>
+                                                    <option value="<?php echo $val['id']  ?>"><?php echo strtoupper($val['razonSocial'])  ?></option>
+                                                <?php endif; ?>    
+                                                <?php endforeach; ?>
+                                            <?php endif; ?> 
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>*Planta de Recepción:</label>
+                                        <select name="planta" id="planta" class="form-control"  >
+                                            <option value="0">-Seleccione-</option>
+                                            <?php if(isset($this->deposito) && count($this->deposito)): ?>
+                                            <?php foreach ($this->deposito as $val): ?>
+                                            <?php if($val['id']==$this->recepcion[0]['planta']): ?>   
+                                                <option value="<?php echo $val['id']  ?>" selected><?php echo strtoupper($val['nombre'])  ?></option>
+                                            <?php else : ?>
+                                                <option value="<?php echo $val['id']  ?>"><?php echo strtoupper($val['nombre'])  ?></option>    
+                                            <?php endif; ?>    
+                                            <?php endforeach; ?>
+                                            <?php endif; ?> 
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>*Fecha de Recepción:</label>
+                                        <input type="date"  class="form-control "  name="fechaRecepcion" id="fechaRecepcion"   value="<?php echo (!empty($this->recepcion[0]['fecha']))?$this->recepcion[0]['fecha']:'' ?>" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>*Nro Voleta:</label>
+                                        <input type="text"  maxlength="30" class="form-control "  name="nroVoleta" id="nroVoleta" value="<?php echo (!empty($this->recepcion[0]['nroVoleta']))?$this->recepcion[0]['nroVoleta']:'' ?>" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                </div>
+			</div>
+            </br>
+            <div class="card card-secondary card-outline card-outline-tabs">
+                <div class="card-header p-0 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                        <li class="nav-item">
+                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Pesaje</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-four-contact-tab" data-toggle="pill" href="#custom-tabs-four-contact" role="tab" aria-controls="custom-tabs-four-contact" aria-selected="false">Otra Informacion</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-four-tabContent">
+                        <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                            <div class="row">
+                                
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">    
+                                                <div class="form-group col-md-8">
+                                                    <label>*Conductor:</label>
+                                                    <input name="conductor"  maxlength="100" type="text" class="form-control form-control-sm" id="conductor" value="<?php echo (!empty($this->recepcion[0]['conductor']))?$this->recepcion[0]['conductor']:'' ?>" />  
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label>*Id Fiscal:</label>
+                                                    <input name="idFiscalConductor"  maxlength="100" type="text" class="form-control form-control-sm" id="idFiscalConductor"  value="<?php echo (!empty($this->recepcion[0]['idFiscalConductor']))?$this->recepcion[0]['idFiscalConductor']:'' ?>" />  
+                                                </div>
+                                    
+                                                <div class="form-group col-md-8">
+                                                    <label>*Modelo de Transporte:</label>
+                                                    <input name="transporte"  maxlength="100" type="text" class="form-control form-control-sm" id="transporte" value="<?php echo (!empty($this->recepcion[0]['modeloCamion']))?$this->recepcion[0]['modeloCamion']:'' ?>"  />  
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label>*Placa:</label>
+                                                    <input name="placa"  maxlength="100" type="text" class="form-control form-control-sm" id="placa" value="<?php echo (!empty($this->recepcion[0]['placaCamion']))?$this->recepcion[0]['placaCamion']:'' ?>" />  
+                                                </div>
+
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">    
+                                                <div class="form-group col-md-4">
+                                                    <label>*Peso Entrada:</label>
+                                                    <input name="pesoEntrada"  maxlength="100" type="text" class="form-control form-control-sm text-right" id="pesoEntrada" value="<?php echo (!empty($this->recepcion[0]['pesoEntrada']))?$this->recepcion[0]['pesoEntrada']:'' ?>" />  
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label>*Peso Salida:</label>
+                                                    <input name="pesoSalida"  maxlength="100" type="text" class="form-control form-control-sm text-right" id="pesoSalida" value="<?php echo (!empty($this->recepcion[0]['pesoSalida']))?$this->recepcion[0]['pesoSalida']:'' ?>" />  
+                                                </div>
+                                    
+                                                <div class="form-group col-md-4">
+                                                    <label>*Peso Neto:</label>
+                                                    <input type="text"  required maxlength="100" class="form-control form-control-sm text-right"  name="pesoNeto" id="pesoNeto" value="<?php echo (!empty($this->recepcion[0]['pesoNeto']))?$this->recepcion[0]['pesoNeto']:'' ?>" />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label>*Humedad:</label>
+                                                    <input name="humedad"  maxlength="100" type="text" class="form-control form-control-sm text-right" id="humedad" value="<?php echo (!empty($this->recepcion[0]['humedad']))?$this->recepcion[0]['humedad']:'' ?>" />  
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label>*Impureza:</label>
+                                                    <input name="impureza"  maxlength="100" type="text" class="form-control form-control-sm text-right" id="impureza" value="<?php echo (!empty($this->recepcion[0]['impureza']))?$this->recepcion[0]['impureza']:'' ?>" />  
+                                                </div>
+                                    
+                                                <div class="form-group col-md-4">
+                                                    <label>*Acondicionado:</label>
+                                                    <input type="text"  required maxlength="100" class="form-control form-control-sm text-right"  name="acondicionado" id="acondicionado" placeholder="" value="<?php echo (!empty($this->recepcion[0]['pesoAcondicionado']))?$this->recepcion[0]['pesoAcondicionado']:'' ?>" />
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">    
+                                                <div class="form-group col-md-12">
+                                                    <label>*Comentarios:</label>
+                                                    <textarea name="comentario" id="comentario" class="form-control" rows="3" ><?php echo (!empty($this->recepcion[0]['comentarios']))?$this->recepcion[0]['comentarios']:'' ?></textarea>  
+                                                </div>
+                                        
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="custom-tabs-four-contact" role="tabpanel" aria-labelledby="custom-tabs-four-contact-tab">
+                            <div class="card">
+                                <div class="card-header"><span class="card-title"></span></div>
+                                <div class="card-body">
+                                    
+                                    <div class="row">
+                                    
+                                           
+                                    </div>
+                                </div>    
+
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+			
+		</div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-xs btn-app" id="agregar"><i class="fa fa-floppy-o"></i>Grabar</button>
+			<a href="<?php echo BASE_URL ?>creditos/recepcion/index/""><button type="button" class="btn btn-xs btn-app bg-danger disabled color-palette" id="cancelar"><i class="fa fa-undo"></i>Cancelar</button></a>					
+        </div>
+	</div>
+		  
+</div>
+    
+</form>
+</div>

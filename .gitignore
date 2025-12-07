@@ -1,0 +1,7 @@
+# ignorar logs
+.log
+#ignorar congfiguracion
+.txt
+.ini
+
+

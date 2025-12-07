@@ -1,0 +1,292 @@
+<div class="row">
+  <div class="col-12">
+    <form name="form-despacho-agregar" id="form-despacho-agregar" method="post" action="<?php echo BASE_URL ?>/creditos/despacho/agregar">
+    <input name="guardar" id="guardar" type="hidden" value="1"  />
+    <input name="configCal" id="configCal" type="hidden" value="<?php echo $this->configCal ?>"  />
+    <input name="configPvp" id="configPvp" type="hidden" value="<?php echo $this->configPvp ?>"  />  
+    <!-- Main content -->
+    <div class="invoice p-3 mb-3">
+              <!-- title row -->
+              <div class="row">
+                <div class="col-12">
+                  
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- info row -->
+              <div class="row invoice-info">
+                <div class="col-sm-4 invoice-col">
+                  
+                  <address>
+                    <strong><?php echo $this->configEmp['razon social'] ?></strong><br>
+                    <small><?php echo $this->configEmp['IdFiscal'] ?></small><br>
+                    <small><?php echo $this->configEmp['domicilio fiscal'] ?></small><br>
+                   
+                  </address>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 invoice-col">
+                    <b>*Productor:</b>
+                    <select class="custom-select form-control-sm  select2" style="width: 100%;" name="productor" id="productor" >
+                    <option value="0">-Seleccione-</option>
+                            <?php if(isset($this->productor) && count($this->productor)): ?>
+                            <?php foreach ($this->productor as $val): ?>
+                            
+                            <option value="<?php echo $val['idFiscal']  ?>"><?php echo strtoupper($val['razonSocial'])  ?></option>
+                            
+                            <?php endforeach; ?>
+                            <?php endif; ?>
+                    </select>
+                  <address>
+                    <strong>Dirección : </strong><small><span id="direccion"></span></small><br>
+                    <small>Phone: <span class="telefono"></span></small><br>
+                    <small>Email: <span class="correo"></span></small>
+                  </address>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 invoice-col">
+                  <b>*Crédito: </b>
+                  <select class="form-control form-control-sm" style="width: 100%;" name="credito" id="credito" >
+                    <option value="0">-Seleccione-</option>                
+                  </select>
+                  <br>
+                  <b>Plan de Trabajo:</b> 
+                  <input name="planTrabajo" id="planTrabajo" type="text" class="form-control form-control-sm" value="" readonly />
+                  <br>
+                  <b>Fecha:</b> <input name="fecha" id="fecha" type="date" class="form-control form-control-sm" value="<?php echo date('Y-m-d') ?>" />
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+ 
+              <!-- Table row -->
+              <div class="row">
+                <div class="col-md-12 ">
+                <div class="card card-defauld">
+                    <div class="card-header"><button type="button" class="btn btn-default" id="add_producto" disabled><i class="fa fa-cubes"></i><span class="h6"> Agregar Producto</span></button></div>
+                    <div class="card-body">
+                        <input type="hidden" name="filas" id="filas" value="0" />      
+                        <table class="table table-sm" id="productos">
+                            <thead>
+                            <tr class="bg-secondary color-palette">                            
+                            <th style="width: 200px;" >Código</th>
+                            <th style="width: 500px;">Descripción</th>
+                            <th style="width: 250px;">Almacén</th>
+                            <th style="width: 150px;">Cantidad</th>
+                            <th style="width: 170px;">Pvp</th>          
+                            <th style="width: 200px;">Subtotal</th>
+                            <th style="width: 32px;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                        
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              <div class="row ">
+                <!-- accepted payments column -->
+                <div class="col-sm-7">
+                  <div class="row">
+                  <div class="col-md-6" style="padding-left: 10px;">    
+                    <small>
+                      <div class="card card-info" id="visor">    
+                        <?php if($this->configCal>0): ?>          
+                          <table class="table table-sm"> 
+                            <thead>
+                              <tr>
+                                <th style="width: 10px">#</th>
+                                <th style="width: 100px">Grupo</th>
+                                <th style="width: 80px">Mto. Aprobado</th>
+                                <th style="width: 80px">Mto. Disponible</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>1.</td>
+                              <td>Semillas:</td>
+                              <td class="text-right">
+                                <span class="" id="semilla_aprobado">00.0</span>
+                              </td>
+                              <td class="text-right">
+                                <span class="" id="semilla_disponible">00.0</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2.</td>
+                              <td>Fertilizantes:</td>
+                              <td class="text-right">
+                                <span class="" id="fertilizante_aprobado">00.0</span>
+                              </td>
+                              <td class="text-right">
+                                <span class="" id="fertilizante_disponible">00.0</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>3.</td>
+                              <td>Agroquimicos</td>
+                            <td class="text-right">
+                              <span class="" id="agroquimico_aprobado">00.0</span>
+                            </td>
+                            <td class="text-right">
+                              <span class="" id="agroquimico_disponible">00.0</span>
+                            </td>
+                            </tr>
+                            <tr>
+                              <td>4.</td>
+                              <td>Combustible</td>
+                              <td class="text-right">
+                                <span class="" id="combustible_aprobado">00.0</span>        
+                              </td>
+                              <td class="text-right">
+                                <span class="" id="combustible_disponible">00.0</span>    
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>5.</td>
+                              <td>Otros Gastos</td>
+                              <td class="text-right">
+                                <span  id="otroGto_aprobado">00.0</span>    
+                              </td>
+                              <td class="text-right">
+                                <span  id="otroGto_disponible">00.0</span>
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        <?php else: ?>  
+                          <table class="table table-sm"> 
+                            <thead>
+                              <tr>
+                                <th style="width: 100px">Plan de financiamiento</th>
+                                <th style="width: 80px">Mto. Aprobado</th>
+                                <th style="width: 80px">Mto. Disponible</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td  ><span id="planf">Maíz-Lluvioso 2024</span></td>
+                                <td class="text-right"><span id="mto-aprobado">00.0</span></td>
+                                <td class="text-right"><span id="mto-disponible">00.0</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        <?php endif; ?>  
+                        </div>
+                      </small>
+                  </div>    
+                    <div class="col-md-6">
+                      <div class="card card-default">
+                        <div class="card-body">
+                          <label class="">Comentario: </label>
+                          <textarea name="comentario" id="comentario" class="form-control form-control-border" rows="4"></textarea>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <!-- /.col -->
+                <div class="col-5">
+                  <div class="card card-secondary card-outline">
+                  <div class="card-body">  
+                  
+                    <table class="table table-sm">
+                      <tr>
+                        <th style="width:50%">Subtotal:</th>
+                        <td><input id="subtotalDoc" name="subtotalDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="0" readonly></td>
+                      </tr>
+                      <tr>
+                        <th style="width:50%">Monto Exento / Exonerado:</th>
+                        <td><input id="exentoDoc" name="exentoDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="0" readonly></td>
+                      </tr>
+                      <tr>
+                        <th style="width:50%">Total Base Imponible:</th>
+                        <td><input id="baseImponibleDoc" name="baseImponibleDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="0" readonly></td>
+                      </tr>
+                      <tr>
+                        <th>Impuesto (16%) Sobre Base Imponible</th>
+                        <td><input id="impuestoDoc" name="impuestoDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="0" readonly></td>
+                      </tr>
+                      <tr>
+                        <th>Total:</th>
+                        <td><input id="totalDoc" name="totalDoc"  type="text" class="form-control form-control-border form-control-sm text-right" value="0" readonly></td>
+                      </tr>
+                    </table>
+                  
+                  </div>
+                  </div>
+                </div>
+                
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              <!-- this row will not appear when printing -->
+              <div class="row no-print">
+                <div class="col-12">
+                  <a href="<?php echo BASE_URL ?>creditos/despacho/index" class="btn btn-danger float-right" ><i class="fa fa-undo"></i> Cancelar</a>
+                  <button type="button" class="btn btn-success float-right" style="margin-right: 5px;" id="agregar"><i class="fa fa-floppy-o"></i> Grabar</button>
+                </div>
+              </div>
+    </div>
+    </form>            <!-- /.invoice -->
+  </div><!-- /.col -->
+</div><!-- /.row -->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="card">
+              <div class="card-header">
+                <h3></h3>
+                <div class="card-title">
+                    <div class="input-group input-group-sm">
+                        <input type="text" id="search_producto" name="search_producto" class="form-control float-right " size="50" />
+                        <div class="input-group-append">
+                            <button type="button" name="search" id="search" class="btn btn-default"><i class="fas fa-search"></i></button>
+                        </div>
+                        <input name="fila" id="fila" type="hidden" value="0" />
+                    </div>
+                </div>
+              </div>                      
+              <div class="card-body table-responsive p-0">
+                    
+                        
+                          <table class="table table-hover text-nowrap" id="tabla">
+                              <thead>
+                                  <tr class="bg-light-blue-active" >
+                                      
+                                      <th width='400'>Descripción</th>
+                                      <th width='150'>Presentación</th>
+                                      <th width='150'>Almacén</th>
+                                      <th width='150'>Exist</th>
+                                      <th></th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+
+                              </tbody>
+                            </table>          
+                    
+                  
+                </div>
+               <div class="card-footer">
+                    <div>
+                      
+                  </div>
+               </div> 
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

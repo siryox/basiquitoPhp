@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<style>
+table, th, td {  border: 1px solid black;  border-collapse: collapse;}
+</style>
+
+<title>MAIZ 255-25</title>
+<table>
+
+<thead>
+<tr>
+<th>idCred</th>
+<th>Productor</th>
+<th>Rif-CI</th>
+<th>telefonos</th>
+<th>direccion</th>
+<th>direccion Campo</th>
+<th>Ha.Financ.</th>
+<th>Ha.Efect.</th>
+<th>RUNOPPA</th>
+<th>SIGESAI USUARIO </th>
+<th>SIGESAI CLAVE</th>
+<th>SUNAGRO USUARIO</th>
+<th>SUNAGRO CLAVE</th>
+<th>Ctas.Bancarias</th>
+<th>SaldoCredActual</th>
+<th>Status Productor
+</th>
+<th>KgArrimados</th>
+<th>FERTIMACHO NPK- 50 KG</th>
+<th>FERTI KCL- 50 KG</th>
+<th>CUSTODIA 10 LTS</th>
+<th>INDEFINIDA</th>
+<th>RINDER- 1LT</th>
+<th>indefinida</th>
+<th>DRAGO- 1LT</th>
+<th>INDEFINIDA</th>
+<th>ALSYSTIN- 1LT</th>
+<th>indefinida</th>
+<th>ACECHO 10 LTS</th>
+<th>INDEFINIDA</th>
+<th>FITOCARRIER- 3 LTS</th>
+<th>indefinida</th>
+<th>RINDER- 10LT</th>
+<th>IMAZAPIR- 1LT</th>
+<th>AUDAX 600- 1LT</th>
+<th>SOLUMIN PH- 1LT</th>
+<th>ACHECHO-1 LT</th>
+<th>FRIJOLADE 24 EC- 1LT</th>
+<th>IMPULSADOR -LTS</th>
+<th>AMINA 720(2-4D) 10LT</th>
+<th>CONCORD 250 GR</th>
+<th>ADVANTA PAC 105</th>
+<th>GLYTOTAL 480 SL</th>
+<th>2,4-D AMINA 6 20 LTS</th>
+<th>2,4-D AMINA 6- 1 LTS-G</th>
+<th>GLYTOTAL 480 SL</th>
+<th>CURTAIL 250 EC 1LT</th>
+<th>QUEMAZONE SL 4LTS</th>
+<th>ADVANTA 9293</th>
+<th>ACOUSTIC TOP WG 50 GR</th>
+<th>FORVIG</th>
+<th>ROUNDUP SPECTRA</th>
+<th>FERTINS-NITROSULFATO 30:7</th>
+<th>NICOSAN 75% 50 GR</th>
+<th>CULTIVAR AZUTEK</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>80</td>
+<td>Anni Karina Bolotin Lipinski</td>
+<td>V-18.322.165</td>
+<td>--</td>
+<td>Ctra 8 Casa Nro 73 Sector La Colonia, Turen Edo Portuguesa Colonia Turen</td>
+<td>Sector Unidad Agricola De Turen Parroquia San Isidro Labrador Municipio Turen Del Estado Portuguesa.</td>
+<td>40.00</td>
+<td>40.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>42.877,20</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>200,00</td>
+<td>40,00</td>
+<td>15,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>200,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>29,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>52,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>80,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>160,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Ramon Elias Bolotin Subero</td>
+<td>V-5.367.042-0</td>
+<td>04145560915--</td>
+<td>Av 2 Con Calle 7 Casa Nro 2.11 Sector Centro Villa Bruzual Portuguesa</td>
+<td>Sector La Flecha Del Municipio Turen, Parroquia Santa Cruz, Del Estado Portuguesa.</td>
+<td>60.00</td>
+<td>53.00</td>
+<td> ( 00010001640002456013  ).</td>
+<td>ramonbolotin@ghotmail.com</td>
+<td>5367042Br**</td>
+<td>053670420R</td>
+<td>053670420R</td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>77.673,39</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>500,00</td>
+<td>60,00</td>
+<td>17,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>55,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>35,00</td>
+<td>18,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>10,00</td>
+<td>38,00</td>
+<td>24,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>52,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>33,00</td>
+<td>120,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>540,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Leivi Jesus Linares Medina</td>
+<td>V-16042896-8</td>
+<td>0424-5127509--</td>
+<td>Calle Principal Casa Sn Caserio Santa Cruz, Turen Santa Cruz Portuguesa</td>
+<td>Sector Los Venados, Parroquia Santa Cruz, Municipio Turen Del Estado Portuguesa.</td>
+<td>130.00</td>
+<td>83.00</td>
+<td> ( 00010001630006289045  ).</td>
+<td>LEIVILINARES77@GMAIL.COM</td>
+<td>V-16042896</td>
+<td></td>
+<td></td>
+<td>Bco:" BANCARIBE" Titular:"LEIVI LINARES" #Cta:"0114 0326 3832 6004 7832"</td>
+<td>108.827,36</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>650,00</td>
+<td>130,00</td>
+<td>26,00</td>
+<td>27,00</td>
+<td>49,00</td>
+<td>0,00</td>
+<td>48,00</td>
+<td>415,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>24,00</td>
+<td>40,00</td>
+<td>26,00</td>
+<td>0,00</td>
+<td>26,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>78,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>80,00</td>
+<td>78,00</td>
+<td>27,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>65,00</td>
+<td>80,00</td>
+<td>33,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Rosis Arianni Cordero Perez</td>
+<td>V-24142289-1</td>
+<td>0424-5934665--</td>
+<td>Calle 2 Casa Nro S/N Caserio Uveral Portuguesa</td>
+<td>Asentamiento Campesino Corralito Parroquia Uveral Municipio Esteller Del Estado Portuguesa</td>
+<td>46.00</td>
+<td>26.00</td>
+<td> ( 00010001610031713398  ).</td>
+<td>ROSISARI9CORDERO@GAMIL.COM</td>
+<td>Rc24142289**</td>
+<td>rosisoleagi24</td>
+<td>rosis24</td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>31.842,70</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>200,00</td>
+<td>40,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>23,00</td>
+<td>100,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>23,00</td>
+<td>52,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>40,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Domenico Rosati Guarente</td>
+<td>V-14.887.936</td>
+<td>0424-5142545--</td>
+<td>Calle 14 Entre Avenidas 12 Y 13 Casa 26 Barrio Bumbi Piritu Estado Portuguesa.</td>
+<td>Caserio Jabillo Las Tortugas, Asentamiento Campesino, Parroquia Piritu, Municipio Esteller, Estado P</td>
+<td>160.00</td>
+<td>150.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>166.551,58</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>1.020,00</td>
+<td>165,00</td>
+<td>29,00</td>
+<td>30,00</td>
+<td>50,00</td>
+<td>12,00</td>
+<td>35,00</td>
+<td>800,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>42,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>49,00</td>
+<td>142,00</td>
+<td>14,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>3,00</td>
+<td>85,00</td>
+<td>120,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>488,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Jose Manuel Sieiro Monsalve</td>
+<td>V-13353149-8</td>
+<td>0424-5846728--</td>
+<td>Calle Lagunazo Esq Calle Lluvia De Oro Casa Nro 49 Conjunto Residencial Llano Alto Campo Guatacaro  </td>
+<td>Sector Las Peñitas, Asentamiento Campesino Sin Informacion Parroquia Canelones Municipio Turen Portu</td>
+<td>85.00</td>
+<td>85.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:</td>
+<td>98.619,00</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>545,00</td>
+<td>85,00</td>
+<td>17,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>83,00</td>
+<td>175,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>6,00</td>
+<td>26,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>29,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>14,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>45,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>25,00</td>
+<td>65,00</td>
+<td>85,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>400,00</td>
+<td>50,00</td>
+<td>2,00</td>
+</tr>
+<tr>
+<td>86</td>
+<td>Luis Alejandro Perez Vargas</td>
+<td>V-18871090-1</td>
+<td>0412-1510055--</td>
+<td>Av 9 Casa Nro 2-21 Urb El Parque Villa Bruzual Portuguesa</td>
+<td>Guasimo Mayitas, Parroquia Santa Cruz Municipio Turen Estado Portuguesa.</td>
+<td>50.00</td>
+<td>14.00</td>
+<td> ( 00010001650079967080  ).</td>
+<td>OLIVIALORETOPEREZ@GMAIL.COM</td>
+<td>Lucio01-</td>
+<td></td>
+<td></td>
+<td>Bco:" BBVA PROVINCIAL" Titular:"LUIS ALEJANDRO PEREZ" #Cta:"0108 0982 7401 0002 8794"</td>
+<td>24.346,09</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>160,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>32,00</td>
+<td>100,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>14,00</td>
+<td>30,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>17,00</td>
+<td>5,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>14,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Daniel Isidro Pirez Vargas</td>
+<td>V-12.446.588</td>
+<td>0416-8537147--</td>
+<td>Calle 2 Casa Nro Sn Sector Comunidad El Gateado Portuguesa</td>
+<td>Asentamiento Campesino Chingali Parroquia Florida Municipio Santa Rosalia Estado Portuguesa</td>
+<td>17.00</td>
+<td>15.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>14.817,35</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>85,00</td>
+<td>17,00</td>
+<td>4,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>24,00</td>
+<td>85,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>22,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>88</td>
+<td>Carlos Miguel Sanjuan Perez</td>
+<td>V-13.182.941</td>
+<td>0414-4051364--</td>
+<td>Av Salvador Feo La Cruz Casa Nro 09 Conjunto Residencial Las Lajas Naguanagua Carabobo</td>
+<td>Asentamiento Campesino Guasimo Mayita Parroquia Sucre Minicipio Girardot Cojedes</td>
+<td>80.00</td>
+<td>80.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>68.019,60</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>450,00</td>
+<td>90,00</td>
+<td>16,00</td>
+<td>21,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>400,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>16,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>160,00</td>
+<td>49,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>40,00</td>
+<td>70,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Wenceslao Ramon Rivas Sanjuan</td>
+<td>V-10989481-4</td>
+<td>0426-5440730--</td>
+<td>Av Principal Casa Nro E6 Urb Las Magnolias San Carlos Cojedes</td>
+<td>Asentamiento Campesino Guasimo Mayita, Sector Iv Parroquia Sucre, Girardot Estado Cojedes</td>
+<td>100.00</td>
+<td>80.00</td>
+<td> ( 00010001620070898197  ).</td>
+<td>WENCESLAORIVAS72@GMAIL.COM</td>
+<td>Rivasw1972!!</td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>83.173,37</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>500,00</td>
+<td>100,00</td>
+<td>20,00</td>
+<td>26,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>72,00</td>
+<td>400,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>35,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>40,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>180,00</td>
+<td>81,00</td>
+<td>5,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>32,00</td>
+<td>90,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Maria Gregoria Segura Colina</td>
+<td>V-10644174-6</td>
+<td>0416-1732770--</td>
+<td>Calle 3 Casa Nro Sn Caserio Punto Fijo, Santa Rosalia Edo Portuguesa </td>
+<td>Asentamiento Campesino Santa Rosalia Y Nueva Florida Parroquia Florida Municipio Santa Rosalia </td>
+<td>30.00</td>
+<td>30.00</td>
+<td> ( 00010001690070511761  ).</td>
+<td>MARIASEGURA1807@GMAIL.COM</td>
+<td>V10644174*</td>
+<td>V106441746</td>
+<td>V106441746</td>
+<td>Bco:" BANCO MERCANTIL" Titular:"MARIA SEGURA" #Cta:"0105 0155 5081 5500 1105"</td>
+<td>27.927,19</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>150,00</td>
+<td>30,00</td>
+<td>6,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>150,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>15,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>10,00</td>
+<td>39,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>91</td>
+<td>Oswaldo De Jesus Lopez Sanchez</td>
+<td>V-18800953-7</td>
+<td>04165549566-04165549566-</td>
+<td>Calle 3 Casa Nro Sn Caerio El Gateado Sector 1 El Playon Portuguesa</td>
+<td>Asentamiento Campesino La Chaconera, Sector La Chaconera, Parroquia La Florida, Municipio Santa Rosa</td>
+<td>25.00</td>
+<td>0.00</td>
+<td> ( 00010001600079900824  ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:" BANCARIBE" Titular:"OSWALDO LOPEZ" #Cta:"0114 0326 3332 6005 0922"</td>
+<td>6.624,13</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>33,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>92</td>
+<td>Alexander Jose Toyo Leal</td>
+<td>V-13.353.581-7</td>
+<td>04161256071--</td>
+<td>Calle 7 Casa Nro Sn Sector Caserio El Gateado Portuguesa</td>
+<td>Asentamiento Campesino Chingali Parroquia Capital Santa Rosalia Del Estado Portuguesa.</td>
+<td>19.00</td>
+<td>0.00</td>
+<td> ( 00010001610074424297  ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>1.895,43</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>93</td>
+<td>Jairo Ariosto Camacho Higuera</td>
+<td>V-22192100-0</td>
+<td>0426-3536650--</td>
+<td>Calle Principal Casa Nro 15-97 Sector Los Chorros Villa Bruzual Portuguesa</td>
+<td>Santa Rosalia Nueva Florida Parroquia Florida Municipio Santa Rosalia Del Estado Portuguesa.</td>
+<td>32.00</td>
+<td>20.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>18.909,74</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>125,00</td>
+<td>25,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>100,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>28,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>94</td>
+<td>Ricardo Ernesto Alvarez Lopez</td>
+<td>V-16751586-6</td>
+<td>0424-5363413--</td>
+<td>Calle Principal Casa Nro Sn Caserio El Aji El Ajicito El Pedregal - El Aji Portuguesa</td>
+<td>Sector El Aji, Asentamiento Campesino Chingali San Isidro Labrador Municipio Turen Portuguesa</td>
+<td>14.00</td>
+<td>13.00</td>
+<td> ( 00010001610075627295  ).</td>
+<td>ra2960490@gmail.com</td>
+<td>V16751586*</td>
+<td>167515866</td>
+<td>167515866</td>
+<td>Bco:" BANCO MERCANTIL" Titular:"RICARDO ALVAREZ" #Cta:"01050155591155037502"</td>
+<td>15.470,45</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>70,00</td>
+<td>14,00</td>
+<td>3,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>35,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>27,00</td>
+<td>20,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>39,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>61,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>95</td>
+<td>Carlos Octaviano Querales</td>
+<td>V-08664081-0</td>
+<td>0414-5026847--</td>
+<td>Calle Principal Casa Nro 14668 Caserio El Aji, Turen Edo. Portuguesa  El Ajicito- El Pedregal</td>
+<td>Sector El Aji, Asentamiento Campesino Chingali Parroquia San Isidro Labrador Municipio Turen.</td>
+<td>5.00</td>
+<td>5.00</td>
+<td> ( 00010001660009551097  ).</td>
+<td>CARLOSQUERALES40@GMAIL.COM</td>
+<td>V8664081*</td>
+<td>561384</td>
+<td>561384</td>
+<td>Bco:" BANCO MERCANTIL" Titular:"CARLOS QUERALES" #Cta:"0105 0155 5171 5501 1037"</td>
+<td>4.764,24</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>25,00</td>
+<td>5,00</td>
+<td>1,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>1,00</td>
+<td>2,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>96</td>
+<td>Luis Alberto Alvarez Lopez</td>
+<td>V-14001655-8</td>
+<td>0424-5363413--</td>
+<td>Calle 9 Entre Avenidas 1 Y 2 Casa Nro 1-27 Sector Centro Villa Bruzual Portuguesa</td>
+<td>Asentamiento Campesino Chingali Parroquia San Isidro Labrador Del Municipio Turen Portuguesa</td>
+<td>60.00</td>
+<td>18.00</td>
+<td> ( 00010001620071007522  ).</td>
+<td>SOFIALVAREZ2230@GMAIL.COM</td>
+<td>V14001655*</td>
+<td>V14001655</td>
+<td>V14001655</td>
+<td>Bco:" BANCO MERCANTIL" Titular:"LUIS ALVAREZ CORRIENTE" #Cta:"0105 0155 5411 5503 3140"</td>
+<td>32.795,46</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>200,00</td>
+<td>60,00</td>
+<td>4,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>38,00</td>
+<td>50,00</td>
+<td>0,00</td>
+<td>9,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>38,00</td>
+<td>31,00</td>
+<td>12,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>38,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>86,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>97</td>
+<td>Jose Ivan Suarez</td>
+<td>V-10.127.348</td>
+<td>0416-5142301--</td>
+<td>Calle 3 Con Transversal 3 Casa Nro 19243-3 Sector El Gateado Portuguesa</td>
+<td>Asentamiento Campesino Chingali Parroquia Capital Santa Rosalia Del Estado Portuguesa</td>
+<td>17.00</td>
+<td>0.00</td>
+<td> ( 00010001610070736419  ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>732,08</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>98</td>
+<td>Gregoria Del Carmen Linarez De Roas</td>
+<td>V-09840751-7</td>
+<td>0426-2570064--</td>
+<td>Calle Principal Casa Sn Caserio Playoncito Piritu Portuguesa</td>
+<td>Asentamiento Campesino Maporal Parroquia Capital Esteller, Municipio Esteller Estado Portuguesa.</td>
+<td>31.00</td>
+<td>25.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:</td>
+<td>26.471,66</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>155,00</td>
+<td>31,00</td>
+<td>5,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>125,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>60,00</td>
+<td>33,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>20,00</td>
+<td>10,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Judith Albertina Rojas Arguelles</td>
+<td>V-16040299-3</td>
+<td>0416-5321913--</td>
+<td>Calle 4 Casa Nro Sn Sector Caserio Poblado 3 Portuguesa</td>
+<td>Asentamiento Campesino Santa Rosalia Nueva Florida Municipio Santa Rosalia Portuguesa</td>
+<td>20.00</td>
+<td>0.00</td>
+<td> ( 00010001650075010388  ).</td>
+<td>rojasjudith115@gmail.com</td>
+<td>V-16040299</td>
+<td></td>
+<td></td>
+<td>Bco:" BANCARIBE" Titular:"JUDITH ROJAS" #Cta:"01140326313269040288"</td>
+<td>-315,30</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>-30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Honorio Alexander Segura Colina</td>
+<td>V-14.677.581</td>
+<td>0416-1001496--</td>
+<td>Calle Principal Casa Sn Sector La Caripucha El Playon Portuguesa</td>
+<td>Estado Portuguesa Municipio Turen Sector Camino N°10</td>
+<td>60.00</td>
+<td>25.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>33.848,28</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>125,00</td>
+<td>25,00</td>
+<td>5,00</td>
+<td>14,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>39,00</td>
+<td>125,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>14,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>23,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>66,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>25,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>101</td>
+<td>German Alexander Rodriguez Ortiz</td>
+<td>V-14.540.869</td>
+<td>04263173409-04125275828-</td>
+<td>Av 4 Cruce Calle 9 Casa 8-82 Sector Centro, Turen Edo. Portuguesa</td>
+<td>Asentamiento Campesino Chingali Setor El Gateado Portuguesa</td>
+<td>60.00</td>
+<td>34.00</td>
+<td> ( 00020004050071210958  ).</td>
+<td>RODRIGUEZGERMANA0@GMAIL.COM</td>
+<td>V14540869**</td>
+<td></td>
+<td></td>
+<td>Bco:" BANESCO" Titular:"GERMAN RODRIGUEZ" #Cta:"0134 0429 1142 9203 1950"</td>
+<td>31.149,27</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>217,00</td>
+<td>24,00</td>
+<td>4,00</td>
+<td>5,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>40,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>18,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>20,00</td>
+<td>26,00</td>
+<td>13,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>105,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Jaime Antonio Rojas Gollo</td>
+<td>V-11.851.476</td>
+<td>04261183490--</td>
+<td>Calle 1 Casa 18 Caserio El Gatiao El Gatiao Portuguesa</td>
+<td>Asentamiento Campesino Chingali, Sector El Gateao Parroquia Capital Turen Portuguesa</td>
+<td>30.00</td>
+<td>13.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>12.898,63</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>70,00</td>
+<td>10,00</td>
+<td>3,00</td>
+<td>3,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>65,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>17,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>22,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Elvis Antony Goyo Peralta</td>
+<td>V-19.636.468</td>
+<td>04262082209--</td>
+<td>Calle 2 Casa Nro 40 Caserio El Gateado Portuguesa</td>
+<td>Asentamiento Campesino Chingali Parroquia Capital Turen Municipio Turen Portuguesa.</td>
+<td>30.00</td>
+<td>30.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>28.348,33</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>150,00</td>
+<td>30,00</td>
+<td>7,00</td>
+<td>8,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>150,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>39,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Wilmen Bladimir Colina Peña</td>
+<td>V-13905552-3</td>
+<td>0416-8506232--</td>
+<td>Calle Principal, Transversal 2 Casa Nro Sn Caserio Poblado 3 Santa Rosalia Estado Portuguesa </td>
+<td>Sector La Rompia Del Zamuro, Parroquia Florida Municipio Santa Rosalia Del Estado Portuguesa.</td>
+<td>30.00</td>
+<td>0.00</td>
+<td> ( 00010001690074802223  ).</td>
+<td> wilmenc5@gmail.com</td>
+<td>W13905552*</td>
+<td></td>
+<td></td>
+<td>Bco:" BANCO DE VENEZUELA" Titular:"WILMEN COLINA" #Cta:"0102 0395 3600 0002 9900"</td>
+<td>1.334,79</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Rodrigo Jesus Peña Cordero</td>
+<td>V-11.075.688-3</td>
+<td>04264180735--</td>
+<td>Calle 04 Casa Nro 3 Sector 18 De Mayo Rio Acarigua Portuguesa</td>
+<td>Asentamiento Campesino Choro Soteldeño O Choro Bocoy, Ubicado En El Sector El Potrero Rio Acarigua </td>
+<td>50.00</td>
+<td>40.00</td>
+<td> ( 00010001680077062599  ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>46.462,01</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>250,00</td>
+<td>50,00</td>
+<td>9,00</td>
+<td>15,00</td>
+<td>50,00</td>
+<td>0,00</td>
+<td>25,00</td>
+<td>120,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>11,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>17,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>40,00</td>
+<td>65,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>126,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Berkis Marlenis Perez Loaiza</td>
+<td>V-13.227.587</td>
+<td>04264120215--</td>
+<td>Calle Las Diez Casita Casa Nro Sn Caserio Poblado 3 Portuguesa</td>
+<td>Asentamiento Campesino Baldios De Santa Rosalia Municipio Santa Rosalia Del Estado Portuguesa</td>
+<td>40.00</td>
+<td>30.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>33.792,63</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>200,00</td>
+<td>40,00</td>
+<td>6,00</td>
+<td>8,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>180,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>13,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>30,00</td>
+<td>45,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>30,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Carmen Josefina Pineda Rodriguez</td>
+<td>V-08673996-4</td>
+<td>0424-5771542--</td>
+<td>Calle Los Hornos Casa Nro 04 Sector La Colonia San Carlos Cojedes</td>
+<td>Asentamiento Guasimo Mayitas, Sector La Batea, Parroquia Santa Cruz Municipio Turen Portuguesa.</td>
+<td>20.00</td>
+<td>17.00</td>
+<td> ( 00010001650009564885  ).</td>
+<td>dr670550@gmail.com</td>
+<td>V8673996*</td>
+<td></td>
+<td></td>
+<td>Bco:" BANCO MERCANTIL" Titular:"JOSE RAMIREZ C.I 16.992.715" #Cta:"0105 0101 6511 0115 6813"</td>
+<td>19.796,95</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>100,00</td>
+<td>20,00</td>
+<td>4,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>17,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>6,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>34,00</td>
+<td>26,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>17,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>85,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Ender Jose Jimenez Alvarado</td>
+<td>V-13354439-5</td>
+<td>0426-4526157--</td>
+<td>Calle Principal Casa Nro S/N Caserio Caño Colorado Piritu Portuguesa</td>
+<td>Caño Colorado Municipio Esteller Del Estado Portuguesa</td>
+<td>70.00</td>
+<td>26.00</td>
+<td> ( 00010001600074421148  ).</td>
+<td>JIMENEZALVARADOENDERJOSE80@GMAIL.COM</td>
+<td>V-13354439</td>
+<td>133544395</td>
+<td>133544395</td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>32.070,71</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>176,00</td>
+<td>42,00</td>
+<td>2,00</td>
+<td>8,00</td>
+<td>48,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>75,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>11,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>24,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>98,00</td>
+<td>39,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>28,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>61,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Samuel Jesus Oropeza Tovar</td>
+<td>V-26.178.297</td>
+<td>--</td>
+<td>Fundo Bejucal Carretera El Socorro Tucupido Estado Guarico</td>
+<td>No Aplica</td>
+<td>700.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>302.188,90</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>1.200,00</td>
+<td>0,00</td>
+<td>120,00</td>
+<td>46,00</td>
+<td>48,00</td>
+<td>0,00</td>
+<td>292,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>165,00</td>
+<td>0,00</td>
+<td>57,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>72,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>0,00</td>
+<td>435,00</td>
+<td>35,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>437,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Francisco Antonio Albornoz Ponce</td>
+<td>V-8.791.369</td>
+<td>0414-2960276--</td>
+<td></td>
+<td>No Aplica</td>
+<td>450.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>249.478,90</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>2.400,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>161,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>50,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>550,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>600,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Jose Maria Jimenez Figarella</td>
+<td>V-18.449.782</td>
+<td>0414-8268721--</td>
+<td>Valle De La Pascua Estado Guarico</td>
+<td>No Aplica</td>
+<td>450.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>146.620,66</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>1.800,00</td>
+<td>0,00</td>
+<td>20,00</td>
+<td>62,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>302,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Aristides Remigio Chirinos Tovoso</td>
+<td>V-7.546.608</td>
+<td>0412-5168604--</td>
+<td>Ctra 1 Casa Sn Sector El Toro Santa Rosalia  Edo. Portuguesa</td>
+<td>Sector El Toro Parroquia Florida Municipio Santa Rosalia Del Estado Portuguesa</td>
+<td>50.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>3.675,05</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>24,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>5,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>113</td>
+<td>Miguel Jose San Juan Jimenez</td>
+<td>V-03691401-3</td>
+<td>0424-4224986--</td>
+<td>Av Bolivar Casa Nro 20-375 Sector Centro San Carlos Cojedes</td>
+<td>Asentamiento Campesino Guasimo Mayita Parroquia Sucre Municipio Girardot Del Estado Cojedes.</td>
+<td>35.00</td>
+<td>10.00</td>
+<td> ( 00010001640004587107  ).</td>
+<td>MIGUELJOSESANJUAN@GMAIL.COM</td>
+<td>mjs15629828.</td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>17.675,33</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>75,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>17,00</td>
+<td>75,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>11,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>21,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>2,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>26,00</td>
+<td>25,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Jorge Alfredo Jimenez Perez</td>
+<td>V-13.226537</td>
+<td>0414-5679866--</td>
+<td>Av 8 Entre Calle 5 Y 8 Barrio Andres Eloy Blanco Casa N° 6-60 </td>
+<td>Asentamiento Campesino Chingali Parroquia Capital Turen Estado Portuguesa</td>
+<td>15.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>5.455,00</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>75,00</td>
+<td>15,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>12,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>3,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>4,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>10,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Jose Ramon Morales Ramos</td>
+<td>V-11.848.508</td>
+<td>0416-1911064--</td>
+<td>Calle Principal Casa Nro Sn Caserio Pobladp Iii Sector I El Playon Portuguesa</td>
+<td>Asentamiento Campesino Chingali, Ubicado En El Sector El Gateao Parroquia Capital Turen Municipio Tu</td>
+<td>30.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>1.366,40</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>9,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>8,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>1,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Agropecuaria La Estrella Jm La Estrella, C.A</td>
+<td>J-50127483-5</td>
+<td>0414-8268721--</td>
+<td>Sector La Vigia Valle De La Pascua Guarico</td>
+<td>El Vigia Valle De La Pascua Estado Guarico</td>
+<td>280.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>60.415,00</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>281,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>117</td>
+<td>Hernan Zambrano</td>
+<td>V-8.888.901</td>
+<td>--</td>
+<td>Turen Portuguesa</td>
+<td></td>
+<td>130.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>26.249,00</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>7,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>115,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td>118</td>
+<td>Oscar Rafael Gonzalez Colmenarez</td>
+<td>V-12.593.771</td>
+<td>--</td>
+<td>Turen Portuguesa</td>
+<td>No Aplica</td>
+<td>100.00</td>
+<td>0.00</td>
+<td> (   ).</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Bco:"" Titular:"" #Cta:""</td>
+<td>141.510,00</td>
+<td>SOLVENTE</td>
+<td>0</td>
+<td>1.800,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>198,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>0,00</td>
+<td>600,00</td>
+<td>0,00</td>
+<td>0,00</td>
+</tr>
+
+</tbody>
+</table></html>

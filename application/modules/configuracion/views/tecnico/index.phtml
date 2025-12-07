@@ -1,0 +1,118 @@
+<div class="row">
+    <div class="col-lg-8 col-md-6">
+        <div class="card card-default">        
+                
+            <div class="card-header">
+                <a class=""> <button class="nuevo btn btn-default btn-sm" title="Presione aquí para AGREGAR un nuevo registro" value="" ><i  class="fa fa-plus"></i></button> </a>                  
+                
+            </div>    
+
+            <div class="card-body">
+                
+                    <table class="table table-bordered table-striped" id="example1" >
+                        <thead>
+                            <tr class="bg-secondary color-palette" >
+                            <th>IdFiscal</th>
+                            <th>Nombre</th>
+                            <th>Telefono</td>
+                            <th>Correo Electronico</td> 
+                            <th width="30" ></th>
+                            <th width="30"></th>
+                            <th width="30"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php $i = 1; ?>    
+                        <?php if(isset($this->lista) && count($this->lista)) :?>
+                            <?php foreach ($this->lista as $val) :?>
+                            <tr>
+                                <td><?php echo $val['IdFiscal'] ?></td>
+                                <td><?php echo ucwords($val['nombre']) ?></td>
+                                <td><?php echo $val['telefonos'] ?></td>
+                                <td><?php echo $val['correos'] ?></td>
+                                <td>
+                                    
+                                    <button class="editar btn btn-default btn-sm" title="Presione aquí para EDITAR" value="<?php echo $val['id'] ?>" ><i  class="fa fa-pencil-square-o"></i></button>
+                                    
+                                </td>    
+                                <td>
+                                    
+                                    <button class="eliminar btn btn-default btn-sm" title="Presione aquí para ELIMINAR" value="<?php echo $val['id'] ?>"><i class="fa fa-trash-o"></i></button>
+                                    
+                                </td>
+                                <td>
+                                    <a href="<?php echo BASE_URL ?>seguridad/role/permisoRoles/<?php echo $val['id'] ?>" title="Presione aquí para agregar Recursos al Rol" >
+                                        <button class="btn btn-default btn-sm"> <i class="fa fa-folder-open-o"></i></button>
+                                </td>
+                            </tr>
+                            <?php $i++; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>    
+                        </tbody>
+                        <tfoot>
+                      
+                        </tfoot>
+                    </table>
+                    <hr>
+                    
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="card card-default">
+            <div class="card-header">Registro de Tecnicos</div>
+            <div class="card-body">
+                <form name="form_tecnico" id="form_tecnico" method="post" autocomplete="off" action="<?php echo BASE_URL ?>configuracion/tecnico/agregar/">
+                    <input name="guardar"  type="hidden" value="1" id="guardar">
+                    <input name="id" type="hidden" value="0" id="id">
+                    <input name="aux" type="hidden" value="0" id="aux">                    
+                    <div class="form-group">
+                        <label>Id Fiscal :</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-barcode"></i></span>
+                            </div>
+                            <input type="text" name="idFiscal" id="idFiscal"  class="form-control"    disabled="true"  placeholder=""/>
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Nombres :</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" name="nombre" id="nombre"  class="form-control"    disabled="true"  placeholder=""/>
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group ">
+                        <label>*Telefono personal:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="text" name="telefono" class="form-control num_tel"  id="telefono"  disabled="true"  placeholder="___ ________">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <div class="form-group">
+                        <label>Correo Personal:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="correo" id="correo"  class="form-control alfa_correo"    disabled="true"  placeholder="Ej.: micorreo@hotmail.com"/>
+                        </div>
+                        <!-- /.input group -->
+                    </div> 
+                    
+                    <hr>
+                    <button type="button" disabled="disabled" name="agregar" id="agregar" title="Presione aquí para GUARDAR el registro"  class="btn btn-xs btn-app"> <i class="fa fa-floppy-o"></i> Guardar</button>
+                    <button type="button" disabled="disabled" name="cancelar" title="Presione aquí para CANCELAR el registro" id="cancelar" class="btn btn-xs btn-app bg-danger color-palette"> <i class="fa fa-undo"></i> Cancelar</button>
+                </form>    
+            </div>
+        </div>
+    </div>    
+</div>

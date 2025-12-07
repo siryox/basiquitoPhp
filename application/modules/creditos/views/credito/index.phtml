@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+			
+			    <div class="card-header">
+				    <a  href="<?php echo BASE_URL ?>creditos/credito/agregar/" title="Presione aquí para AGREGAR un nuevo registro"><button class="btn btn-default btn-sm" ><i class="fa fa-plus"></i></button></a>  
+			    </div>
+ 
+          <div class="card-body">
+                <table class="table table-bordered table-striped" id="example1" >
+                    <thead>
+                        <tr class="bg-secondary color-palette" >
+                        <th>Id</th>    
+                        <th>Id Fiscal</th>
+                        <th>Productor</th>
+                        <th>Unidad de Producción</th>
+                        <th>Rubro/Ciclo</th>
+                        <th>Progreso</th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if(isset($this->lista) && count($this->lista)) :?>
+                        <?php foreach ($this->lista as $val) :?>
+                        <tr>
+                        <td><?php echo $val['id'] ?></td>
+                            <td><?php echo $val['idFiscalProductor'] ?></td>
+                            
+                            <td><?php echo strtoupper($val['productores_nombreProductor']) ?></td>
+                  
+                            <td><?php echo strtoupper($val['fincas_nombre']) ?></td>
+                            <td><?php echo strtoupper($val['rubro']) ?> / <?php echo strtoupper($val['ciclo']) ?></td>
+                            <td>
+                            <?php if(strtoupper($val['estado']=='APROBADO')): ?>
+                                <div class="progress progress-xs progress-striped active" title="<?php echo $val['title'] ?>">
+                                    <div class="progress-bar bg-warning" style="width: <?php echo $val['progreso'] ?>%"></div>
+                                </div>
+                                <span class="badge bg-warning"><?php echo $val['progreso'] ?>% - <?php echo strtoupper($val['estado']) ?></span> 
+                            <?php else: ?> 
+                                <?php if(strtoupper($val['estado']=='RECHAZADO') || strtoupper($val['estado']=='ANULADO')): ?>  
+                                    <span class="badge bg-danger"><?php echo strtoupper($val['estado']) ?> </span>
+                                <?php else: ?>
+                                    <div class="progress progress-xs progress-striped active" title="">
+                                        <div class="progress-bar bg-success" style="width: 100%"></div>
+                                    </div>
+                                    <span class="badge bg-success">100% LIQUIDADO</span>   
+                                <?php endif; ?>    
+                            <?php endif; ?>
+                            </td>
+                            <td>
+                            <?php if (strtoupper($val['estado'])=='APROBADO' || strtoupper($val['estado'])=='POR EVALUACION'): ?>
+                                <a href="<?php echo BASE_URL ?>creditos/credito/editar/<?php echo $val['id'] ?>" >
+                                    <button class="btn btn-default btn-sm" title="Presione aquí para editar registro"> <i class="fa fa-edit"></i></button>
+                            <?php else: ?>
+                                <button class="btn btn-default btn-sm" title="Presione aquí para editar registro" disabled> <i class="fa fa-edit"></i></button>
+                            <?php endif ?>
+                            </td>
+                            <td>
+                            <?php if (strtoupper($val['estado'])=='APROBADO' || strtoupper($val['estado'])=='POR EVALUACION'): ?>
+                                <a href="<?php echo BASE_URL ?>creditos/credito/eliminar/<?php echo $val['id'] ?>" >
+                                <button class="btn btn-default btn-sm" title="Presione aquí para eliminar registro"> <i class="fa fa-trash"></i></button></td>
+                            <?php else: ?>
+                                <button class="btn btn-default btn-sm" title="Presione aquí para eliminar registro" disabled> <i class="fa fa-trash"></i></button></td>
+                            <?php endif ?>    
+                            <td>
+                                <a href="<?php echo BASE_URL ?>creditos/credito/cuenta/<?php echo $val['id'] ?>" ><button class="btn btn-default btn-sm" title="Presione aquí para ver estado de cuenta.."> <i class="fa fa-bar-chart"></i></button></td>    
+                        </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>    
+                    </tbody>
+                    <tfoot>
+                      
+                    </tfoot>
+                </table>
+                <hr>
+                <p>
+                        <?php //if(isset($this->paginacion)) echo $this->paginacion; ?>
+                </p>
+            
+          </div>
+
+        </div>
+    </div>
+        
+</div>

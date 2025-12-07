@@ -1,0 +1,105 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+			
+			    <div class="card-header">
+				    <a  href="<?php echo BASE_URL ?>creditos/despacho/agregar/" title="Presione aquí para AGREGAR un nuevo registro"><button class="btn btn-default btn-sm" ><i class="fa fa-plus"></i></button></a>  
+			    </div>
+ 
+          <div class="card-body">
+                <table class="table table-bordered table-striped" id="example1" >
+                    <thead>
+                        <tr class="bg-secondary color-palette" >
+                        <th>Id</th>
+                        <th>Fecha</th>
+                        <th>Documento</th>
+                        <th>Productor</th>
+                        <th>Concepto</th>
+                        <th >Monto Total</th>
+                        <th >Estado</th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                        <th width="30"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if(isset($this->lista) && count($this->lista)) :?>
+                        <?php foreach ($this->lista as $val) :?>
+                        <tr>
+                            <td><?php echo $val['id'] ?></td>
+                            <td><?php echo $val['fecha'] ?></td>
+                            <td><?php echo strtoupper($val['tipo'].'-'.$val['correlativo']) ?></td>
+                  
+                            <td><?php echo strtoupper($val['idFiscalProductor'].' - '.$val['razonSocial']) ?></td>
+                            <td><?php echo strtoupper($val['concepto']) ?></td>
+                            <td class="text-right"><strong>$</strong> <?php echo number_format($val['montoTotal'],2,".",",") ?></td>
+                            <td>
+                                <?php if(strtoupper($val['estado'])=='ANULADO'): ?>
+                                <span class="badge bg-danger"><?php echo strtoupper($val['estado']) ?></span>
+                                <?php endif; ?>
+                                <?php if(strtoupper($val['estado'])=='XENTREGAR'): ?>
+                                <span class="badge bg-warning"><?php echo strtoupper($val['estado']) ?></span>
+                                <?php endif; ?>
+                        
+                            </td>
+                            <td>
+                                <a href="<?php echo BASE_URL ?>creditos/despacho/editar/<?php echo $val['id'] ?>" >
+                                    <button class="btn btn-default btn-sm" title="Presione aquí para editar registro"> <i class="fa fa-edit"></i></button>
+                            </td>
+                            <td>
+                                <a href="<?php echo BASE_URL ?>creditos/despacho/devolucion/<?php echo $val['id'] ?>" >
+                                    <button class="btn btn-info btn-sm" title="Presione aquí para realizar devolución de productos"><i class="fa fa-undo"></i></button>
+                            </td>
+                            <td>
+                            <?php if($val['estado']!='ANULADO'):?>
+                                <a href="<?php echo BASE_URL ?>creditos/despacho/anular/<?php echo $val['id'] ?>" >
+                                <button class="btn btn-danger btn-sm" title="Presione aquí para Cancelar Registro"><i class="fa-solid fa-ban"></i></i></button>
+                            <?php endif; ?>  
+                            </td>
+                            
+                            <td>
+                                <button class="btn btn-default btn-sm imprimir" title="Presione aquí para imprimir Despacho" value="<?php echo $val['id'] ?>" data-toggle="modal" data-target="#modal-xl"> <i class="fa fa-print"></i></button>
+                            </td>
+                              
+                        </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>    
+                    </tbody>
+                    <tfoot>
+                      
+                    </tfoot>
+                </table>
+                <hr>
+                <p>
+                        <?php //if(isset($this->paginacion)) echo $this->paginacion; ?>
+                </p>
+            
+          </div>
+
+        </div>
+    </div>
+        
+</div>
+
+<div class="modal fade" id="modal-xl" bis_skin_checked="1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-xl" bis_skin_checked="1">
+        <div class="modal-content" bis_skin_checked="1">
+            <div class="modal-header" bis_skin_checked="1">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" bis_skin_checked="1">
+                <div id="nota" ></div>
+            </div>
+            <div class="modal-footer justify-content-between" bis_skin_checked="1">
+               
+                <button type="button" class="btn btn-primary" id="imprimir"><i class="fa fa-print"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

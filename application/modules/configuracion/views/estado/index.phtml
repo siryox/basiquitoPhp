@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-lg-8 col-md-6">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="nav-item"><a class="nav-link active" href="#">Estados o Provincias</a></li>
+            <li role="presentation" class="nav-item"><a class="nav-link" href="<?php echo  BASE_URL ?>configuracion/municipio/index/">Municipios</a></li>
+            <li role="presentation" class="nav-item"><a class="nav-link" href="<?php echo  BASE_URL ?>configuracion/parroquia/index/">Parroquias</a></li>
+        </ul>
+        <div class="card card-secondary card-outline">        
+                
+            <div class="card-header">
+                <a class=""> <button class="nuevo btn btn-default btn-sm" title="Presione aquí para AGREGAR un nuevo registro" value="" ><i  class="fa fa-plus"></i></button> </a>                  
+            
+            </div>
+            <div class="card-body">
+                
+                    <table class="table table-bordered table-striped" id="example1" >
+                        <thead>
+                        <tr class="bg-secondary color-palette">
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Creación</th>
+                            <th>Estatus</td>
+                            <th width="30"></th>
+                            <th width="30"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php $i = 1; ?>
+                        <?php if(isset($this->lista) && count($this->lista)) :?>
+                            <?php foreach ($this->lista as $val) :?>
+
+                            <tr>
+                                <td><?php echo $val['id_estado'] ?></td>
+                                <td><?php echo ucfirst($val['descripcion_estado']) ?></td>
+                                <td><?php echo date('d-m-Y',strtotime($val['fecha_creacion'])) ?></td>
+                                <td><?php echo ($val['estatus_estado']==1)?'Activo' : 'Inactivo' ?></td>
+                                <td>
+                                    <?php if($val['estatus_estado']==1): ?>
+                                    <button class="editar btn btn-default btn-xs" title="Presione aquí para EDITAR" value="<?php echo $val['id_estado'] ?>" ><i  class="fa fa-pencil-square-o"></i></button>
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <?php if($val['estatus_estado']==1): ?>
+                                    <button class="eliminar btn btn-default btn-xs" title="Presione aquí para ELIMINAR" value="<?php echo $val['id_estado'] ?>"><i class="fa fa-trash-o"></i></button>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                            <?php $i++; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        </tbody>
+                        <tfoot>
+                      
+                        </tfoot>
+                    </table>
+                    
+                
+          </div>
+          <div class="card-footer clearfix">
+                                       
+          </div>
+
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="card card-secondary card-outline">
+            <div class="card-header">Gestión de Estado / Provincias</div>
+            <div class="card-body">
+                <form name="estado" id="estado" method="post" autocomplete="off" action="<?php echo BASE_URL ?>configuracion/estado/agregar/">
+                    <input name="guardar" type="hidden" value="1" id="guardar">
+                    <input name="id" type="hidden" value="0" id="id">
+                    <input name="aux" type="hidden" value="" id="aux">
+                    <div class="form-group">
+                      <label>Descripción:</label>
+                      <input name="descripcion" type="text" class="form-control" id="descripcion" placeholder="Ingrese nombre del estado" required disabled="true" />
+                    </div>
+                    <button type="button" title="Presione aquí para Guardar el registro" name="agregar" id="agregar" class="btn btn-xs btn-app" ><i class="fa fa-floppy-o"></i> Guardar</button>
+                    <button type="button" name="cancelar" title="Presione aquí para VACIAR el formulario" id="cancelar" class="btn btn-xs btn-app bg-danger disabled color-palette"><i class="fa fa-undo"></i> Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
