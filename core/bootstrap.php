@@ -6,10 +6,16 @@
 	//------------------------------------------------------------------------
 	class bootstrap{
 		
-		public static function start( request $peticion)
+		/**
+		 * Inicia la aplicación.
+		 * @param registry $registry La instancia del Registry.
+		 */
+		public static function start(registry $registry)
 		{
+			// El bootstrap ahora pide el objeto 'request' al registry.
+			// Es en este momento que el Registry creará 'new request()' por primera vez.
+			$peticion = $registry->request;
 			$modulo = $peticion->getModulo();
-					
 			$controller = $peticion->getControlador(). 'Controller';
 			
 			$rutaControlador = APP_PATH . 'controllers'. DS . $controller . '.php';
@@ -97,4 +103,3 @@
 		}
 		
 	}
-

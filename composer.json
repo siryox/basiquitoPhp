@@ -1,0 +1,24 @@
+{
+    "name": "basiquito/php-framework",
+    "description": "Framework casero para gestion.",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Tu Nombre",
+            "email": "tu@email.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "application/controllers/",
+            "App\\Models\\": "application/models/",
+            "App\\Services\\": "application/services/",
+            "App\\Libs\\": "application/libs/"
+        }
+    },
+    "require": {
+        "nesbot/carbon": "^3.11"
+    }
+}

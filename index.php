@@ -24,20 +24,25 @@
         define('CONF_PATH',APP_PATH . 'config' . DS);
        
         
-        try{          
-            require_once CORE_PATH . 'config.php' ;	  		
-            require_once CORE_PATH . 'autoload.php' ;
-            require_once CORE_PATH . 'Hash.php';
-            //require_once LIB_PATH  . 'applicationController.php';    
-           
+        try{  
+            
+            // 1. Cargar el autoloader de Composer. Será el único necesario.
+            require_once ROOT. 'vendor/autoload.php';
 
+            // 2. Cargar configuración esencial (como la de la BD)
+            require_once CORE_PATH . 'config.php' ;	  		
+           
+            // 3. Obtener la instancia del Registry
             $registry = registry::getInstancia();
-            $registry ->_request = new request();
-            $registry ->_db = new database();
-            $registry ->_dbi = new dmi();
-            $registry ->_acl = new acl();
-            // die("prueba");
-            bootstrap ::start($registry->_request);
+            
+            // 4. Registrar las "recetas" de los componentes del núcleo (sin instanciar)
+            $registry->request = 'request';
+            $registry->db = 'database';
+            $registry->dbi = 'dmi';
+            $registry->acl = 'acl';
+            
+            // 5. Iniciar el bootstrap. Bootstrap ahora pedirá el request al registry.
+            bootstrap::start($registry);
           
             }catch(errorsys $e)
                 {

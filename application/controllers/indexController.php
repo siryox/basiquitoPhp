@@ -1,4 +1,8 @@
 <?php
+
+// 1. Importamos la clase que queremos usar de la nueva librería
+use Carbon\Carbon;
+
 class indexController extends Controller
 {
     private $_usuario;
@@ -11,7 +15,12 @@ class indexController extends Controller
 
     public function index()
     {
-        $this->redireccionar('index/login');
+        // 2. Usamos la nueva clase
+        // Por ejemplo, para obtener la fecha y hora actual en español
+        printf("Prueba de Carbon: La fecha es %s", Carbon::now()->locale('es_ES')->isoFormat('LLLL'));
+        echo "<br>";
+        echo "Redireccionando al login en 3 segundos...";
+        header("refresh:3;url=" . BASE_URL . "index/login");
     }
 
 
